@@ -12,7 +12,13 @@ templates = Jinja2Templates(directory="templates")
 # Configuration
 RARITIES = ["Common", "Uncommon", "Rare", "Epic"]
 DOMAINS = ["Fury", "Calm", "Mind", "Body", "Chaos", "Order"]
-REFRESH_COOLDOWN_HOURS = 1 # Cooldown for fresh API calls
+EXPANSIONS = [
+    {"name": "Origins", "code": "origins"},
+    {"name": "Proving Grounds", "code": "proving_grounds"},
+    {"name": "Arcane", "code": "arcane"},
+    {"name": "Spiritforged", "code": "spiritforged"},
+    {"name": "Unleashed", "code": "unleashed"}
+]
 
 @app.on_event("startup")
 def startup_event():
@@ -23,7 +29,8 @@ async def read_root(request: Request):
     return templates.TemplateResponse("index.html", {
         "request": request,
         "rarities": RARITIES,
-        "domains": DOMAINS
+        "domains": DOMAINS,
+        "expansions": EXPANSIONS
     })
 
 @app.get("/api/price")
@@ -34,48 +41,36 @@ async def get_price(
     z: bool = False, 
     l: str = None, 
     e: str = None,
+    f: bool = False,
     force_refresh: bool = False
 ):
     # 1. Check latest in DB
-    # Handle empty strings from JS as None
     lang = l if l else None
     exp = e if e else None
     
-    latest = db.get_latest_price(rarity, domain, q, z, lang, exp)
+    latest = db.get_latest_price(rarity, domain, q, z, lang, exp, f)
     
     if latest and not force_refresh:
         return dict(latest)
 
-    # 2. Check cooldown if force_refresh is requested
-    if latest and force_refresh:
-        # SQLite returns UTC timestamps usually, depending on implementation. 
-        # For simplicity, we compare time.
-        last_time = datetime.strptime(latest['timestamp'], "%Y-%m-%d %H:%M:%S")
-        if datetime.utcnow() - last_time < timedelta(hours=REFRESH_COOLDOWN_HOURS):
-            return {
-                "error": f"Cooldown active. Last update was {latest['timestamp']}",
-                "cached": dict(latest)
-            }
-
     # 3. Call API and save
-    result = calc.calculate_cost(rarity, domain, q, z, lang, exp)
+    result = calc.calculate_cost(rarity, domain, q, z, lang, exp, f)
     
     if "error" not in result and result.get("count", 0) > 0:
         db.save_price(
             rarity, domain, q, z, lang, exp,
-            result["total_cost"], result["items_found"], result["count"], result["currency"]
+            result["total_cost"], result["items_found"], result["count"], result["currency"], f
         )
-        # Fetch it back to get the timestamp from DB
-        latest = db.get_latest_price(rarity, domain, q, z, lang, exp)
+        latest = db.get_latest_price(rarity, domain, q, z, lang, exp, f)
         return dict(latest)
     
     return result
 
 @app.get("/api/latest")
-async def get_all_latest(q: int = 1, z: bool = False, l: str = None, e: str = None):
+async def get_all_latest(q: int = 1, z: bool = False, l: str = None, e: str = None, f: bool = False):
     lang = l if l else None
     exp = e if e else None
-    return db.get_all_latest(q, z, lang, exp)
+    return db.get_all_latest(q, z, lang, exp, f)
 
 import argparse
 

@@ -28,7 +28,8 @@ def normalize_name(name):
     """Lowercases and removes all non-alphanumeric characters."""
     return re.sub(r'[^a-z0-9]', '', name.lower())
 
-def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, lang_target=None, expansion_filter=None):
+def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, lang_target=None, expansion_filter=None, foil_target=False):
+    # ... (rest of the function setup)
     load_dotenv(dotenv_path='env')
     api_token = os.getenv('API_CARDTRADER')
     if not api_token:
@@ -114,11 +115,39 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
         except:
             continue
 
+        # Filter by Zero compatibility if requested
         if zero_only:
             listings = [l for l in listings if l.get('user', {}).get('can_sell_via_hub') is True]
 
+        # FILTER: Ignore graded and low condition
+        listings = [
+            l for l in listings 
+            if not l.get('graded', False) 
+            and l.get('properties_hash', {}).get('condition') in ['Near Mint', 'Mint']
+        ]
+
         if lang_target:
             listings = [l for l in listings if l.get('properties_hash', {}).get('riftbound_language', '').lower() == lang_target.lower()]
+
+        if not listings: continue
+
+        # FOIL LOGIC:
+        # If foil_target is True, we only want foils.
+        # If foil_target is False, we prioritize NON-foils, but take foils if that's all there is?
+        # Actually, let's keep it simple: If foil_target is False, filter OUT foils unless explicitly requested.
+        
+        def is_foil(l):
+            props = l.get('properties_hash', {})
+            return props.get('riftbound_foil') or props.get('foil')
+
+        if foil_target:
+            listings = [l for l in listings if is_foil(l)]
+        else:
+            # Prioritize non-foils
+            non_foils = [l for l in listings if not is_foil(l)]
+            if non_foils:
+                listings = non_foils
+            # else: keep original (foils) if that's the only NM option
 
         if not listings: continue
 
@@ -161,9 +190,10 @@ if __name__ == "__main__":
     parser.add_argument("-q", "--quantity", type=int, default=1, help="Quantity each (default: 1)")
     parser.add_argument("-z", "--zero", action="store_true", help="Zero compatibility only")
     parser.add_argument("-e", "--expansion", help="Filter by expansion name/code (origins, proving_grounds, etc.)")
+    parser.add_argument("-f", "--foil", action="store_true", help="Only include foil listings")
     
     args = parser.parse_args()
-    result = calculate_cost(args.rarity, args.domain, args.quantity, args.zero, args.language, args.expansion)
+    result = calculate_cost(args.rarity, args.domain, args.quantity, args.zero, args.language, args.expansion, args.foil)
     
     if "error" in result:
         print(f"Error: {result['error']}")
@@ -172,4 +202,5 @@ if __name__ == "__main__":
         print(f"Target: {result['count']} cards, {args.quantity} copies (Total: {result['count']*args.quantity})")
         print(f"Items found: {result['items_found']}/{result['count']*args.quantity}")
         print(f"Total Cost: {result['total_cost']:.2f} {result['currency']}")
+
 

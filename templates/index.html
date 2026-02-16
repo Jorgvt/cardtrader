@@ -20,6 +20,7 @@
         .price-value { font-size: 1.2rem; font-weight: bold; color: #198754; }
         .stats { font-size: 0.75rem; color: #6c757d; }
         .timestamp { font-size: 0.65rem; color: #adb5bd; margin-top: 4px; }
+        .foil-badge { font-size: 0.6rem; background-color: #ffc107; color: #000; padding: 1px 4px; border-radius: 4px; margin-bottom: 2px; }
     </style>
 </head>
 <body class="bg-light">
@@ -40,6 +41,12 @@
                         </div>
                     </div>
                     <div class="col-auto">
+                        <div class="form-check mt-4">
+                            <input class="form-check-input" type="checkbox" id="foil" onchange="loadCached()">
+                            <label class="form-check-label" for="foil">Foil Only</label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
                         <label class="form-label">Language:</label>
                         <select id="lang" class="form-select" onchange="loadCached()">
                             <option value="">Any</option>
@@ -48,10 +55,16 @@
                         </select>
                     </div>
                     <div class="col-auto">
-                        <button onclick="refreshAll(true)" class="btn btn-warning mt-4">🔥 Force Refresh (API)</button>
+                        <label class="form-label">Expansion:</label>
+                        <select id="exp" class="form-select" onchange="loadCached()">
+                            <option value="">All Sets</option>
+                            {% for e in expansions %}
+                            <option value="{{ e.code }}">{{ e.name }}</option>
+                            {% endfor %}
+                        </select>
                     </div>
-                    <div class="col text-end">
-                        <div class="mt-4 text-muted small">Sequential refresh to respect API limits.</div>
+                    <div class="col-auto">
+                        <button onclick="refreshAll(true)" class="btn btn-warning mt-4">🔥 Force Refresh (API)</button>
                     </div>
                 </div>
             </div>
@@ -107,18 +120,19 @@
 
         function updateCell(rarity, domain, data) {
             const cell = document.getElementById(`cell-${rarity}-${domain}`);
-            if (!data || data.total_cards === 0) {
+            if (!data || data.total_cards === 0 || data.count === 0) {
                 cell.innerHTML = `<span class="text-muted small">No data</span>`;
                 currentPrices[`${rarity}-${domain}`] = 0;
             } else {
-                // 'price' in data if from DB, 'total_cost' if from direct calc
                 const p = data.price !== undefined ? data.price : data.total_cost;
                 const items = data.items_found;
                 const total = data.total_cards || (data.count * document.getElementById('qty').value);
                 const ts = data.timestamp || 'Just now';
                 const currency = data.currency || 'EUR';
+                const foil = data.foil ? '<span class="foil-badge">FOIL</span>' : '';
 
                 cell.innerHTML = `
+                    ${foil}
                     <div class="price-value">${p.toFixed(2)} ${currency}</div>
                     <div class="stats">${items}/${total} items</div>
                     <div class="timestamp">${ts}</div>
@@ -135,19 +149,16 @@
             const q = document.getElementById('qty').value;
             const z = document.getElementById('zero').checked;
             const l = document.getElementById('lang').value;
+            const f = document.getElementById('foil').checked;
+            const e = document.getElementById('exp').value;
             
             try {
-                const response = await fetch(`/api/price?rarity=${rarity}&domain=${domain}&q=${q}&z=${z}&l=${l}&force_refresh=${force}`);
+                const response = await fetch(`/api/price?rarity=${rarity}&domain=${domain}&q=${q}&z=${z}&l=${l}&f=${f}&e=${e}&force_refresh=${force}`);
                 const data = await response.json();
                 
                 if (data.error) {
-                    if (data.cached) {
-                        alert(`Card ${rarity} ${domain}: ${data.error}. Showing cached data.`);
-                        updateCell(rarity, domain, data.cached);
-                    } else {
-                        cell.innerHTML = `<span class="text-danger small">${data.error}</span>`;
-                        currentPrices[`${rarity}-${domain}`] = 0;
-                    }
+                    cell.innerHTML = `<span class="text-danger small">${data.error}</span>`;
+                    currentPrices[`${rarity}-${domain}`] = 0;
                 } else {
                     updateCell(rarity, domain, data);
                 }
@@ -162,8 +173,9 @@
             const q = document.getElementById('qty').value;
             const z = document.getElementById('zero').checked;
             const l = document.getElementById('lang').value;
+            const f = document.getElementById('foil').checked;
+            const e = document.getElementById('exp').value;
             
-            // Clear current view
             const rarities = {{ rarities | tojson }};
             const domains = {{ domains | tojson }};
             rarities.forEach(r => domains.forEach(d => {
@@ -172,12 +184,9 @@
             }));
 
             try {
-                const response = await fetch(`/api/latest?q=${q}&z=${z}&l=${l}`);
-                const data = await response.json(); // Array of latest records
-                
-                data.forEach(item => {
-                    updateCell(item.rarity, item.domain, item);
-                });
+                const response = await fetch(`/api/latest?q=${q}&z=${z}&l=${l}&f=${f}&e=${e}`);
+                const data = await response.json();
+                data.forEach(item => updateCell(item.rarity, item.domain, item));
             } catch (err) {
                 console.error("Error loading cache", err);
             }
@@ -216,7 +225,6 @@
             }
         }
 
-        // Initial load
         window.onload = loadCached;
     </script>
 </body>

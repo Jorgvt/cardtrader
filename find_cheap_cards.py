@@ -82,6 +82,13 @@ def find_cheap_cards(rarity_target, lang_target=None, expansion_target=4166, zer
             if zero_only:
                 listings = [l for l in listings if l.get('user', {}).get('can_sell_via_hub') is True]
 
+            # FILTER: High condition only, no graded
+            listings = [
+                l for l in listings 
+                if not l.get('graded', False) 
+                and l.get('properties_hash', {}).get('condition') in ['Near Mint', 'Mint']
+            ]
+
             if lang_target:
                 listings = [
                     l for l in listings 
@@ -90,6 +97,15 @@ def find_cheap_cards(rarity_target, lang_target=None, expansion_target=4166, zer
 
             if not listings:
                 continue
+
+            # FOIL LOGIC: Prioritize non-foils
+            def is_foil(l):
+                props = l.get('properties_hash', {})
+                return props.get('riftbound_foil') or props.get('foil')
+
+            non_foils = [l for l in listings if not is_foil(l)]
+            if non_foils:
+                listings = non_foils
 
             prices = sorted([l['price_cents'] for l in listings if 'price_cents' in l])
             
