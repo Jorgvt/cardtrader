@@ -4,7 +4,17 @@ import statistics
 import argparse
 from dotenv import load_dotenv
 
-def find_cheap_cards(rarity_target, lang_target=None, expansion_id=4166, zero_only=False):
+# Common Riftbound expansion mapping
+EXPANSIONS = {
+    'origins': 4166,
+    'promos': 4167,
+    'proving_grounds': 4275,
+    'arcane': 4289,
+    'spiritforged': 4299,
+    'unleashed': 4425
+}
+
+def find_cheap_cards(rarity_target, lang_target=None, expansion_target=4166, zero_only=False):
     load_dotenv(dotenv_path='env')
     api_token = os.getenv('API_CARDTRADER')
     if not api_token:
@@ -13,10 +23,22 @@ def find_cheap_cards(rarity_target, lang_target=None, expansion_id=4166, zero_on
 
     headers = {"Authorization": f"Bearer {api_token}"}
     
+    # Resolve expansion ID
+    exp_id = expansion_target
+    if isinstance(expansion_target, str):
+        if expansion_target.isdigit():
+            exp_id = int(expansion_target)
+        else:
+            exp_id = EXPANSIONS.get(expansion_target.lower())
+            if not exp_id:
+                print(f"Error: Unknown expansion name '{expansion_target}'.")
+                print(f"Known names: {', '.join(EXPANSIONS.keys())}")
+                return
+
     # 1. Fetch Blueprints for the expansion
-    print(f"Fetching blueprints for expansion {expansion_id}...")
+    print(f"Fetching blueprints for expansion ID {exp_id}...")
     bp_url = "https://api.cardtrader.com/api/v2/blueprints/export"
-    params = {"expansion_id": expansion_id}
+    params = {"expansion_id": exp_id}
     try:
         response = requests.get(bp_url, headers=headers, params=params)
         response.raise_for_status()
@@ -57,12 +79,8 @@ def find_cheap_cards(rarity_target, lang_target=None, expansion_id=4166, zero_on
             if not listings:
                 continue
 
-            # Filter by Zero compatibility if requested
             if zero_only:
-                listings = [
-                    l for l in listings 
-                    if l.get('user', {}).get('can_sell_via_hub') is True
-                ]
+                listings = [l for l in listings if l.get('user', {}).get('can_sell_via_hub') is True]
 
             if lang_target:
                 listings = [
@@ -95,20 +113,14 @@ def find_cheap_cards(rarity_target, lang_target=None, expansion_id=4166, zero_on
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Find cheap Riftbound cards on CardTrader.")
-    parser.add_argument("rarity", nargs="?", help="Rarity level (e.g., Epic, Rare, Common)")
+    parser.add_argument("rarity", nargs="?", help="Rarity level (e.g., Epic, Rare)")
     parser.add_argument("language", nargs="?", help="Language code (e.g., en, fr)")
-    parser.add_argument("-r", "--rarity-flag", dest="rarity_flag", help="Rarity level (flag version)")
-    parser.add_argument("-l", "--language-flag", dest="lang_flag", help="Language code (flag version)")
-    parser.add_argument("-e", "--expansion", type=int, default=4166, help="Expansion ID (default: 4166 for Origins)")
-    parser.add_argument("-z", "--zero", action="store_true", help="Only include CardTrader Zero compatible listings")
+    parser.add_argument("-e", "--expansion", default="origins", help="Expansion name or ID (default: origins)")
+    parser.add_argument("-z", "--zero", action="store_true", help="Only CardTrader Zero compatible listings")
 
     args = parser.parse_args()
 
-    # Priority: Flag > Positional
-    final_rarity = args.rarity_flag or args.rarity
-    final_lang = args.lang_flag or args.language
-
-    if not final_rarity:
+    if not args.rarity:
         parser.print_help()
     else:
-        find_cheap_cards(final_rarity, final_lang, args.expansion, args.zero)
+        find_cheap_cards(args.rarity, args.language, args.expansion, args.zero)

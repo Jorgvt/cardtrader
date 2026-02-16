@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riftbound Price Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .price-cell {
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+        }
+        .loading { font-style: italic; color: #6c757d; }
+        .domain-header, .rarity-header { font-weight: bold; padding: 10px; background-color: #e9ecef; text-align: center; }
+        .price-value { font-size: 1.2rem; font-weight: bold; color: #198754; }
+        .stats { font-size: 0.75rem; color: #6c757d; }
+        .timestamp { font-size: 0.65rem; color: #adb5bd; margin-top: 4px; }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container-fluid px-4 py-5">
+        <h1 class="mb-4 text-center">Riftbound Price Dashboard</h1>
+        
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label class="form-label">Quantity:</label>
+                        <input type="number" id="qty" class="form-control" value="1" min="1" onchange="loadCached()">
+                    </div>
+                    <div class="col-auto">
+                        <div class="form-check mt-4">
+                            <input class="form-check-input" type="checkbox" id="zero" onchange="loadCached()">
+                            <label class="form-check-label" for="zero">Zero Only</label>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <label class="form-label">Language:</label>
+                        <select id="lang" class="form-select" onchange="loadCached()">
+                            <option value="">Any</option>
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <button onclick="refreshAll(true)" class="btn btn-warning mt-4">🔥 Force Refresh (API)</button>
+                    </div>
+                    <div class="col text-end">
+                        <div class="mt-4 text-muted small">Sequential refresh to respect API limits.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-bordered mb-0 bg-white">
+                <thead>
+                    <tr>
+                        <th class="rarity-header">Rarity / Domain</th>
+                        {% for domain in domains %}
+                        <th class="domain-header">{{ domain }}</th>
+                        {% endfor %}
+                        <th class="domain-header bg-dark text-white">Total (Row)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rarity in rarities %}
+                    <tr>
+                        <td class="rarity-header">{{ rarity }}</td>
+                        {% for domain in domains %}
+                        <td>
+                            <div id="cell-{{ rarity }}-{{ domain }}" class="price-cell">
+                                <span class="loading">...</span>
+                            </div>
+                        </td>
+                        {% endfor %}
+                        <td>
+                            <div id="total-row-{{ rarity }}" class="price-cell fw-bold bg-light">0.00 EUR</div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr class="fw-bold bg-dark text-white">
+                        <td class="rarity-header">Total (Col)</td>
+                        {% for domain in domains %}
+                        <td>
+                            <div id="total-col-{{ domain }}" class="price-cell">0.00 EUR</div>
+                        </td>
+                        {% endfor %}
+                        <td>
+                            <div id="total-grand" class="price-cell bg-success text-white">0.00 EUR</div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let currentPrices = {}; 
+
+        function updateCell(rarity, domain, data) {
+            const cell = document.getElementById(`cell-${rarity}-${domain}`);
+            if (!data || data.total_cards === 0) {
+                cell.innerHTML = `<span class="text-muted small">No data</span>`;
+                currentPrices[`${rarity}-${domain}`] = 0;
+            } else {
+                // 'price' in data if from DB, 'total_cost' if from direct calc
+                const p = data.price !== undefined ? data.price : data.total_cost;
+                const items = data.items_found;
+                const total = data.total_cards || (data.count * document.getElementById('qty').value);
+                const ts = data.timestamp || 'Just now';
+                const currency = data.currency || 'EUR';
+
+                cell.innerHTML = `
+                    <div class="price-value">${p.toFixed(2)} ${currency}</div>
+                    <div class="stats">${items}/${total} items</div>
+                    <div class="timestamp">${ts}</div>
+                `;
+                currentPrices[`${rarity}-${domain}`] = p;
+            }
+            updateTotals();
+        }
+
+        async function fetchPrice(rarity, domain, force = false) {
+            const cell = document.getElementById(`cell-${rarity}-${domain}`);
+            cell.innerHTML = '<div class="spinner-border spinner-border-sm text-primary" role="status"></div>';
+            
+            const q = document.getElementById('qty').value;
+            const z = document.getElementById('zero').checked;
+            const l = document.getElementById('lang').value;
+            
+            try {
+                const response = await fetch(`/api/price?rarity=${rarity}&domain=${domain}&q=${q}&z=${z}&l=${l}&force_refresh=${force}`);
+                const data = await response.json();
+                
+                if (data.error) {
+                    if (data.cached) {
+                        alert(`Card ${rarity} ${domain}: ${data.error}. Showing cached data.`);
+                        updateCell(rarity, domain, data.cached);
+                    } else {
+                        cell.innerHTML = `<span class="text-danger small">${data.error}</span>`;
+                        currentPrices[`${rarity}-${domain}`] = 0;
+                    }
+                } else {
+                    updateCell(rarity, domain, data);
+                }
+            } catch (err) {
+                cell.innerHTML = `<span class="text-danger small">Error</span>`;
+                currentPrices[`${rarity}-${domain}`] = 0;
+            }
+            updateTotals();
+        }
+
+        async function loadCached() {
+            const q = document.getElementById('qty').value;
+            const z = document.getElementById('zero').checked;
+            const l = document.getElementById('lang').value;
+            
+            // Clear current view
+            const rarities = {{ rarities | tojson }};
+            const domains = {{ domains | tojson }};
+            rarities.forEach(r => domains.forEach(d => {
+                document.getElementById(`cell-${r}-${d}`).innerHTML = '<span class="loading">...</span>';
+                currentPrices[`${r}-${d}`] = 0;
+            }));
+
+            try {
+                const response = await fetch(`/api/latest?q=${q}&z=${z}&l=${l}`);
+                const data = await response.json(); // Array of latest records
+                
+                data.forEach(item => {
+                    updateCell(item.rarity, item.domain, item);
+                });
+            } catch (err) {
+                console.error("Error loading cache", err);
+            }
+            updateTotals();
+        }
+
+        function updateTotals() {
+            const rarities = {{ rarities | tojson }};
+            const domains = {{ domains | tojson }};
+            let grandTotal = 0;
+
+            rarities.forEach(r => {
+                let rowSum = 0;
+                domains.forEach(d => rowSum += currentPrices[`${r}-${d}`] || 0);
+                document.getElementById(`total-row-${r}`).innerText = `${rowSum.toFixed(2)} EUR`;
+                grandTotal += rowSum;
+            });
+
+            domains.forEach(d => {
+                let colSum = 0;
+                rarities.forEach(r => colSum += currentPrices[`${r}-${d}`] || 0);
+                document.getElementById(`total-col-${d}`).innerText = `${colSum.toFixed(2)} EUR`;
+            });
+
+            document.getElementById('total-grand').innerText = `${grandTotal.toFixed(2)} EUR`;
+        }
+
+        function refreshAll(force = false) {
+            const rarities = {{ rarities | tojson }};
+            const domains = {{ domains | tojson }};
+            let sequence = Promise.resolve();
+            for (const r of rarities) {
+                for (const d of domains) {
+                    sequence = sequence.then(() => fetchPrice(r, d, force));
+                }
+            }
+        }
+
+        // Initial load
+        window.onload = loadCached;
+    </script>
+</body>
+</html>
