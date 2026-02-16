@@ -46,12 +46,36 @@ uv run calculate_collection_cost.py <rarity> <domain> [language] [flags]
 
 ---
 
+### 3. Fetch Wishlists (`fetch_wishlists.py`)
+Fetches all your CardTrader wishlists and saves their contents into individual text files.
+
+**Usage:**
+```bash
+uv run fetch_wishlists.py [flags]
+```
+
+**Flags:**
+- `-e, --expansion`: Filter items by expansion name or ID.
+- `-z, --zero`: Filter items by CardTrader Zero compatibility.
+
 ---
+
+### 4. Web Dashboard (`server.py`)
+A FastAPI-based web dashboard that shows a grid of collection prices for each domain and rarity.
+
+**Usage:**
+1. Run the server:
+   ```bash
+   uv run python server.py --port 8000
+   ```
+   *(Or use `./start_server.sh 8000`)*
+2. Open your browser at `http://localhost:8000`.
+3. Configure your filters (Quantity, Zero, Language) and click **Refresh All Prices**.
 
 ---
 
 ### 5. Automated Updates (`cron_update.py`)
-A script intended for use with a cronjob to update the database automatically. It accepts multiple values for each filter to update several configurations in one run.
+A script intended for use with a cronjob to update the database automatically.
 
 **Manual Run Example:**
 ```bash
@@ -59,16 +83,7 @@ A script intended for use with a cronjob to update the database automatically. I
 uv run python cron_update.py --quantities 1 3 --languages en fr --zero 1
 ```
 
-**Flags:**
-- `-q, --quantities`: List of quantities (e.g., `1 3 4`).
-- `-l, --languages`: List of language codes (e.g., `en fr`). Use `none` for "Any".
-- `-z, --zero`: List of Zero-only statuses (`1` for True, `0` for False).
-
 **Setting up a Cronjob:**
 ```cron
 0 */6 * * * cd /path/to/project && /path/to/uv run python cron_update.py -q 1 3 -l en -z 1 >> /path/to/project/cron.log 2>&1
 ```
-
-
-
-

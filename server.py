@@ -77,5 +77,11 @@ async def get_all_latest(q: int = 1, z: bool = False, l: str = None, e: str = No
     exp = e if e else None
     return db.get_all_latest(q, z, lang, exp)
 
+import argparse
+
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    parser = argparse.ArgumentParser(description="Run the Riftbound Price Dashboard server.")
+    parser.add_argument("-p", "--port", type=int, default=8000, help="Port to run the server on (default: 8000)")
+    args = parser.parse_args()
+    
+    uvicorn.run(app, host="0.0.0.0", port=args.port)
