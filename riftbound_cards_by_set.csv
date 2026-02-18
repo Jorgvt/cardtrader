@@ -1,0 +1,657 @@
+Set,Name,Dominion,Rarity,Energy,Might,Text
+Origins,Sun Disc,Fury,Uncommon,2,,:rb_exhaust:: [Legion] — The next unit you play this turn enters ready. (Get the effect if you've played another card this turn.)
+Origins,Stalwart Poro,Calm,Common,2,2,[Shield] (+1 :rb_might: while I'm a defender.)
+Origins,Stand United,Calm,Common,3,,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Buff a friendly unit. Buffs give an additional +1 :rb_might: to friendly units this turn. (To buff a unit, give it a +1 :rb_might: buff if it doesn't already have one.)"
+Origins,Startipped Peak,Colorless,Uncommon,,,"When you hold here, you may channel 1 rune exhausted."
+Origins,Stealthy Pursuer,Chaos,Common,4,4,"When a friendly unit moves from my location, I may be moved with it."
+SFD,Stellacorn Herder,Calm,Uncommon,4,3,"When I move, draw 1."
+SFD,Sterak's Gage,Calm,Rare,3,3,"[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)"
+Origins,Stormbringer,"Fury, Body",Epic,6,,"Choose a friendly unit in your base. Deal damage equal to its Might to all enemy units at a battlefield, then move your unit there."
+Origins,Stormclaw Ursine,Body,Common,7,6,"[Tank] (I must be assigned combat damage first.)When you play me, channel 1 rune exhausted."
+SFD,Strike Down,Body,Uncommon,3,,Choose an equipped friendly unit. It deals damage equal to its Might to an enemy unit. Then detach an Equipment from it.
+Origins,Stupefy,Mind,Common,1,,"[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:. Draw 1."
+Origins,Stacked Deck,Chaos,Uncommon,1,,[Action] (Play on your turn or in showdowns.)Look at the top 3 cards of your Main Deck. Put 1 into your hand and recycle the rest.
+Origins,Sunlit Guardian,Calm,Common,3,3,[Shield] (+1 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)
+Origins,Super Mega Death Rocket!,"Fury, Chaos",Epic,4,,"Deal 5 to a unit.When you conquer, you may discard 1 to return this from your trash to your hand."
+SFD,Svellsongur,Calm,Epic,3,,"[Equip] :rb_energy_1::rb_rune_calm: (:rb_energy_1::rb_rune_calm:: Attach this to a unit you control.)As this is attached to a unit, copy that unit's text to this Equipment's effect text for as long as this is attached to it."
+Origins,Swift Scout,"Mind, Chaos",Showcase,,,"You may pay :rb_energy_1: to hide a card with [Hidden] instead of :rb_rune_rainbow:.:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board."
+Origins,Swift Scout,"Mind, Chaos",Rare,,,"You may pay :rb_energy_1: to hide a card with [Hidden] instead of :rb_rune_rainbow:.:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board."
+Origins,Swift Scout,"Mind, Chaos",Showcase,,,"You may pay :rb_energy_1: to hide a card with [Hidden] instead of :rb_rune_rainbow:.:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board."
+SFD,Switcheroo,Chaos,Rare,2,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action]_ (Play on your turn or in showdowns.)_Swap the Might of two units at the same battlefield this turn.
+Origins,Symbol of the Solari,Order,Uncommon,1,,"If a combat where you are the attacker ends in a tie, recall ALL units instead. (Send them to base. This isn't a move. Ties are calculated after combat damage is dealt.)"
+Origins,Targon's Peak,Colorless,Uncommon,,,"When you conquer here, ready 2 runes at the end of this turn."
+Origins,"Sona, Harmonious",Calm,Rare,4,4,"While I'm at a battlefield, ready 4 friendly runes at the end of your turn."
+SFD,"Sivir, Mercenary",Chaos,Rare,4,4,"[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)If you've spent at least :rb_rune_rainbow::rb_rune_rainbow: this turn, I have +2 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)"
+SFD,"Sivir, Mercenary",Chaos,Showcase,4,4,"[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)If you've spent at least :rb_rune_rainbow::rb_rune_rainbow: this turn, I have +2 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)"
+Origins,Sky Splitter,Fury,Common,8,,[Action] (Play on your turn or in showdowns.)This spell's Energy cost is reduced by the highest Might among units you control.Deal 5 to a unit at a battlefield.
+Origins,Smoke Screen,Mind,Common,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -4 :rb_might: this turn, to a minimum of 1 :rb_might:."
+Origins,Sneaky Deckhand,Chaos,Common,3,2,You may play me to an open battlefield.
+Origins,Soaring Scout,Order,Common,2,1,"[Deathknell] — Channel 1 rune exhausted. (When I die, get the effect.)"
+Origins,Solari Chief,Order,Uncommon,5,4,"When you play me, choose an enemy unit. If it is stunned, kill it. Otherwise, stun it. (It doesn't deal combat damage this turn.)"
+Origins,Solari Shieldbearer,Calm,Common,3,2,"When you play me, stun a unit. (It doesn't deal combat damage this turn.)"
+Origins,Solari Shrine,Calm,Rare,3,,"When you kill a stunned enemy unit, you may exhaust this to draw 1."
+Origins,"Taric, Protector",Calm,Rare,4,4,[Shield] (+1 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)Other friendly units here have [Shield].
+SFD,"Soraka, Wanderer",Order,Rare,4,4,"I must be assigned combat damage last.If another unit you control here would die, if it has less Might than me, instead heal it, exhaust it, and recall it. (Send it to base. This isn't a move.)"
+Origins,Soulgorger,Chaos,Rare,8,5,"When you play me, you may play a unit from your trash, ignoring its Energy cost. (You must still pay its Power cost.)"
+Origins,Spectral Matron,Order,Uncommon,4,4,"When you play me, you may play a unit costing no more than :rb_energy_3: and no more than :rb_rune_rainbow: from your trash, ignoring its cost."
+SFD,Spinning Axe,"Fury, Chaos",Epic,2,3,"[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] :rb_rune_rainbow: (:rb_rune_rainbow:: Attach this to a unit you control.)[Temporary] (If this is unattached, kill it at the start of its controller's Beginning Phase, before scoring.)"
+Origins,Spirit's Refuge,Calm,Uncommon,2,,"When you play this, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)Friendly buffed units have [Deflect] if they didn't already. (Opponents must pay :rb_rune_rainbow: to choose those units with a spell or ability.)"
+Origins,Spoils of War,Body,Uncommon,4,,"[Reaction] (Play any time, even before spells and abilities resolve.)If an enemy unit has died this turn, this costs :rb_energy_2: less.Draw 2."
+Origins,Sprite,Colorless,Common,,3,"[Temporary] (Kill me at the start of your Beginning Phase, before scoring.)"
+Origins,Sprite Call,Mind,Common,3,,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Play a ready 3 :rb_might: Sprite unit token with [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)"
+Origins,Sprite Mother,Mind,Uncommon,4,3,"When you play me, play a ready 3 :rb_might: Sprite unit token with [Temporary] here. (Kill it at the start of its controller's Beginning Phase, before scoring.)"
+Origins,"Tryndamere, Barbarian",Fury,Rare,7,8,"When I conquer after an attack, if you assigned 5 or more excess damage to enemy units, you score 1 point."
+Origins,Tideturner,Chaos,Rare,2,2,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)When you play me, you may choose a unit you control. Move me to its location and it to my original location."
+Origins,Time Warp,Mind,Epic,10,,Take a turn after this one. Banish this.
+Origins,Traveling Merchant,Chaos,Uncommon,2,2,"When I move, discard 1, then draw 1."
+SFD,Treasure Hoard,Colorless,Uncommon,,,"When you conquer here, you may pay :rb_energy_1: to play a Gold gear token exhausted."
+SFD,Treasure Hunter,Chaos,Common,2,1,"When I move, play a Gold gear token exhausted."
+Origins,Treasure Trove,Chaos,Uncommon,2,,"When this leaves the board, draw 1 and channel 1 rune exhausted.:rb_rune_chaos:, :rb_exhaust:: Kill this."
+Origins,Trifarian Gloryseeker,Order,Common,2,2,"[Legion] — When you play me, buff me. (If I don't have a buff, I get a +1 :rb_might: buff. Get the effect if you've played another card this turn.)"
+Origins,Trifarian War Camp,Colorless,Uncommon,,,Units here have +1 :rb_might:. (This includes attackers.)
+SFD,Trinity Force,Body,Rare,4,2,[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)
+SFD,Trove Golem,Order,Rare,8,9,"When you play me, play four Gold gear tokens exhausted."
+Proving Grounds,Tibbers,"Fury, Chaos",Epic,8,7,"When you play me, deal 3 to all units at battlefields."
+Origins,"Twisted Fate, Gambler",Chaos,Rare,4,4,"When I attack, reveal the top rune of your rune deck, then recycle it. Do one of the following based on its domain:* :rb_rune_fury: — Deal 2 to an enemy unit here and 1 to all other enemy units here.* :rb_rune_mind: — Draw 1.* :rb_rune_order: — Stun an enemy unit."
+Origins,"Udyr, Wildman",Body,Rare,6,6,Spend my buff: Choose one you've not chosen this turn —* Deal 2 to a unit at a battlefield.* Stun a unit at a battlefield.* Ready me.* Give me [Ganking] this turn.
+Origins,Unchecked Power,Mind,Epic,7,,"Exhaust all friendly units, then deal 12 to ALL units at battlefields."
+Origins,Undercover Agent,Chaos,Common,5,5,"[Deathknell] — Discard 2, then draw 2. (When I die, get the effect.)"
+SFD,Undertitan,Order,Rare,6,5,"When you play me, give your other units +2 :rb_might: this turn.As I'm revealed from your deck, [Add] :rb_energy_2:."
+Origins,Unforgiven,"Calm, Chaos",Showcase,,,":rb_energy_2:, :rb_exhaust:: Move a friendly unit to or from its base."
+Origins,Unforgiven,"Calm, Chaos",Rare,,,":rb_energy_2:, :rb_exhaust:: Move a friendly unit to or from its base."
+Origins,Unforgiven,"Calm, Chaos",Showcase,,,":rb_energy_2:, :rb_exhaust:: Move a friendly unit to or from its base."
+Origins,Unlicensed Armory,Fury,Uncommon,2,,"Discard 1, :rb_exhaust:: Choose a friendly unit. The next time it dies this turn, you may pay :rb_rune_fury: to recall it exhausted instead. (Send it to base. This isn't a move.)"
+Origins,The Candlelit Sanctum,Colorless,Uncommon,,,"When you conquer here, look at the top two cards of your Main Deck. You may recycle one or both of them. Put those you don't back in any order."
+Origins,Tasty Faefolk,Calm,Rare,7,6,"[Accelerate] (You may pay :rb_energy_1::rb_rune_calm: as an additional cost to have me enter ready.)[Deathknell] — Channel 2 runes exhausted and draw 1. (When I die, get the effect.)"
+Origins,"Teemo, Scout",Chaos,Showcase,2,1,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)When you play me, give me +3 :rb_might: this turn."
+Origins,"Teemo, Scout",Chaos,Rare,2,1,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)When you play me, give me +3 :rb_might: this turn."
+Origins,"Teemo, Strategist",Mind,Epic,2,2,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them."
+Origins,"Teemo, Strategist",Mind,Showcase,2,2,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them."
+Origins,The Arena's Greatest,Colorless,Uncommon,,,"At the start of each player's first Beginning Phase, that player gains 1 point."
+Origins,The Boss,"Body, Order",Showcase,,,"When a buffed unit you control would die, you may pay :rb_rune_rainbow: and exhaust me to spend its buff and recall it exhausted instead. (Send it to base. This isn't a move.)When you conquer, ready me."
+Origins,The Boss,"Body, Order",Showcase,,,"When a buffed unit you control would die, you may pay :rb_rune_rainbow: and exhaust me to spend its buff and recall it exhausted instead. (Send it to base. This isn't a move.)When you conquer, ready me."
+Origins,The Boss,"Body, Order",Rare,,,"When a buffed unit you control would die, you may pay :rb_rune_rainbow: and exhaust me to spend its buff and recall it exhausted instead. (Send it to base. This isn't a move.)When you conquer, ready me."
+SFD,"Sivir, Ambitious",Body,Showcase,6,7,"[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or Ability.)When I conquer after an attack, if you assigned 5 or more excess damage to enemy units, you may deal that much to an enemy unit."
+Origins,The Dreaming Tree,Colorless,Uncommon,,,"The first time you choose a friendly unit with a spell here each turn, draw 1."
+Origins,The Grand Plaza,Colorless,Uncommon,,,"When you hold here, if you have 7+ units here, you win the game."
+Origins,The Harrowing,Chaos,Rare,6,,"Play a unit from your trash, ignoring its Energy cost. (You must still pay its Power cost.)"
+Origins,The Syren,Chaos,Uncommon,2,,":rb_energy_1:, :rb_exhaust:: Move a friendly unit at a battlefield to its base."
+SFD,The Zero Drive,Mind,Epic,3,2,"[Equip] :rb_energy_1::rb_rune_mind: (:rb_energy_1::rb_rune_mind:: Attach this to a unit you control.):rb_energy_3::rb_rune_mind:, Banish this: Play all units banished with this, ignoring their costs. (Use only if unattached.)"
+Origins,Thermo Beam,Fury,Uncommon,5,,[Action] (Play on your turn or in showdowns.)Kill all gear.
+Origins,Thousand-Tailed Watcher,Mind,Rare,7,7,"[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)When you play me, give enemy units -3 :rb_might: this turn, to a minimum of 1 :rb_might:."
+SFD,Thwonk!,Calm,Common,2,,[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Stun an attacking unit. (It doesn't deal combat damage this turn.)
+SFD,Tianna Crownguard,Calm,Epic,7,4,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)While I'm at a battlefield, opponents can't score points."
+Origins,Reinforce,Calm,Uncommon,5,,Look at the top 5 cards of your Main Deck. You may play a unit from among them. Its Energy cost is reduced by :rb_energy_5:. Then recycle the remaining cards.
+SFD,Ravenbloom Conservatory,Colorless,Uncommon,,,"When you defend here, reveal the top card of your Main Deck. If it's a spell, put it in your hand. Otherwise, recycle it."
+Origins,Ravenbloom Student,Mind,Uncommon,2,2,"When you play a spell, give me +1 :rb_might: this turn."
+Origins,Ravenborn Tome,Fury,Rare,3,,:rb_exhaust:: The next spell you play deals 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.)
+Origins,Reaver's Row,Colorless,Uncommon,,,"When you defend here, you may move a friendly unit here to base."
+Origins,Rebuke,Chaos,Common,2,,[Action] (Play on your turn or in showdowns.)Return a unit at a battlefield to its owner's hand.
+Origins,Reckoner's Arena,Colorless,Uncommon,,,"When you hold here, activate the conquer effects of units here."
+Origins,Recruit (DE),Colorless,Common,,1,
+Origins,Recruit (NX),Colorless,Common,,1,
+Origins,Recruit (ZN),Colorless,Common,,1,
+Proving Grounds,Recruit the Vanguard,Order,Uncommon,6,,[Action] (Play on your turn or in showdowns.)Play four 1 :rb_might: Recruit unit tokens. (They can be played to your base or to battlefields you control.)
+Origins,Raging Soul,Fury,Uncommon,4,4,"If you've discarded a card this turn, I have [Assault] and [Ganking]. (+1 :rb_might: while I'm an attacker. I can move from battlefield to battlefield.)"
+SFD,"Rek'Sai, Breacher",Fury,Epic,3,3,[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault]_ (+1 :rb_might: while I'm an attacker.)_Friendly units played from anywhere other than a player's hand have [Accelerate].
+SFD,"Rek'Sai, Breacher",Fury,Showcase,3,3,[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault]_ (+1 :rb_might: while I'm an attacker.)_Friendly units played from anywhere other than a player's hand have [Accelerate].
+SFD,"Rek'Sai, Swarm Queen",Order,Rare,5,5,"When I attack, you may reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest. If the played card is a unit, you may play it here."
+SFD,"Rek'Sai, Swarm Queen",Order,Showcase,5,5,"When I attack, you may reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest. If the played card is a unit, you may play it here."
+SFD,Relentless Pursuit,"Fury, Body",Epic,2,,"[Action] (Play on your turn or in showdowns.)Move a friendly unit. You may attach an Equipment with the same controller to it. This turn, that unit has &quot;When I conquer, you may move me to my base.&quot;"
+Origins,Relentless Storm,"Fury, Body",Showcase,,,"When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)"
+Origins,Relentless Storm,"Fury, Body",Rare,,,"When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)"
+Origins,Relentless Storm,"Fury, Body",Showcase,,,"When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)"
+SFD,"Rell, Magnetic",Fury,Rare,4,4,"Tank (I must be assigned combat damage first.)When I attack, you may play an Equipment with Energy cost no more than :rb_energy_2:, ignoring its cost, and attach it to me."
+Origins,Progress Day,Mind,Rare,6,,Draw 4.
+Origins,Portal Rescue,Mind,Uncommon,3,,"[Action] (Play on your turn or in showdowns.)Banish a friendly unit, then its owner plays it to their base, ignoring its cost."
+Origins,Possession,Chaos,Epic,8,,[Action] (Play on your turn or in showdowns.)Choose an enemy unit at a battlefield. Take control of it and recall it. (Send it to your base. This isn't a move.)
+Origins,Pouty Poro,Fury,Common,2,2,[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)
+SFD,Power Nexus,Colorless,Uncommon,,,"When you hold here, you may pay :rb_rune_rainbow::rb_rune_rainbow::rb_rune_rainbow::rb_rune_rainbow: to score 1 point."
+SFD,Premonition,Mind,Epic,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Draw 3."
+Origins,Primal Strength,Body,Rare,4,,[Action] (Play on your turn or in showdowns.)Give a unit +7 :rb_might: this turn.
+SFD,Prize of Progress,Mind,Uncommon,4,3,"When you use an activated ability of a gear, give me +1 :rb_might: this turn."
+SFD,Prodigal Explorer,"Mind, Chaos",Rare,,,:rb_exhaust:: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.
+SFD,Production Surge,Mind,Uncommon,4,,This costs :rb_energy_2: less if you control a Mech.Play a 3 :rb_might: Mech unit token to your base.Draw 1.
+SFD,"Renata Glasc, Industrialist",Order,Showcase,4,4,Your tokens enter ready.
+Origins,Promising Future,Mind,Rare,5,,"Each player looks at the top 5 cards of their Main Deck, chooses one, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)"
+SFD,Punch First,Body,Common,1,,[Action] (Play on your turn or in showdowns.)Give a unit +5 :rb_might: this turn.
+SFD,Purifier,"Fury, Body",Showcase,,,Your Equipment each give [Assault]. (+1 :rb_might: while equipped unit is an attacker.)
+SFD,Purifier,"Fury, Body",Rare,,,Your Equipment each give [Assault]. (+1 :rb_might: while equipped unit is an attacker.)
+Origins,"Qiyana, Victorious",Body,Rare,4,4,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)When I conquer, draw 1 or channel 1 rune exhausted."
+Origins,Radiant Dawn,"Calm, Order",Showcase,,,"When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Radiant Dawn,"Calm, Order",Rare,,,"When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Radiant Dawn,"Calm, Order",Showcase,,,"When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Raging Firebrand,Fury,Rare,6,4,"When you play me, the next spell you play this turn costs :rb_energy_5: less."
+Origins,"Sett, Kingpin",Order,Showcase,4,5,[Tank] (I must be assigned combat damage first.)I get +1 :rb_might: for each buffed friendly unit at my battlefield.
+SFD,Seal of Discord,Chaos,Showcase,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_chaos:. (Abilities that add resources can't be reacted to.)
+Origins,Seal of Focus,Calm,Epic,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_calm:. (Abilities that add resources can't be reacted to.)
+SFD,Seal of Focus,Calm,Showcase,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_calm:. (Abilities that add resources can't be reacted to.)
+Origins,Seal of Insight,Mind,Epic,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_mind:. (Abilities that add resources can't be reacted to.)
+Origins,Seal of Rage,Fury,Epic,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_fury:. (Abilities that add resources can't be reacted to.)
+SFD,Seal of Strength,Body,Showcase,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_body:. (Abilities that add resources can't be reacted to.)
+Origins,Seal of Strength,Body,Epic,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_body:. (Abilities that add resources can't be reacted to.)
+Origins,Seal of Unity,Order,Epic,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_order:. (Abilities that add resources can't be reacted to.)
+Origins,"Sett, Brawler",Body,Showcase,5,4,"When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)Spend my buff: Give me +4 :rb_might: this turn."
+SFD,"Sett, Brawler",Body,Showcase,5,4,"When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)Spend my buff: Give me +4 :rb_might: this turn."
+Origins,Seal of Discord,Chaos,Epic,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_chaos:. (Abilities that add resources can't be reacted to.)
+Origins,"Sett, Kingpin",Order,Rare,4,5,[Tank] (I must be assigned combat damage first.)I get +1 :rb_might: for each buffed friendly unit at my battlefield.
+Origins,Shakedown,Fury,Rare,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Choose an enemy unit. Deal 6 to it unless its controller has you draw 2."
+Origins,"Shen, Kinkou",Order,Rare,3,3,"[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)[Shield 2] (+2 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)"
+Origins,Shipyard Skulker,Chaos,Common,3,3,
+Origins,Showstopper,"Body, Order",Epic,1,,"Buff a friendly unit in your base, then move it to a battlefield. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Sigil of the Storm,Colorless,Uncommon,,,"When you conquer here, recycle one of your runes."
+Origins,Singularity,Mind,Uncommon,6,,Deal 6 to each of up to two units.
+Origins,Siphon Power,"Mind, Order",Epic,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Choose a battlefield. Give friendly units there +1 :rb_might: this turn and enemy units there -1 :rb_might: this turn, to a minimum of 1 :rb_might:."
+SFD,"Sivir, Ambitious",Body,Epic,6,7,"[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or Ability.)When I conquer after an attack, if you assigned 5 or more excess damage to enemy units, you may deal that much to an enemy unit."
+SFD,Ruin Runner,Body,Uncommon,6,5,I can't be chosen by enemy spells and abilities.
+SFD,"Renata Glasc, Industrialist",Order,Rare,4,4,Your tokens enter ready.
+SFD,"Rengar, Pouncing",Fury,Rare,3,3,"[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)[Assault 2] (+2 :rb_might: while I'm an attacker.)I can be played to a battlefield you're attacking."
+Origins,Retreat,Mind,Uncommon,1,,"[Reaction] (Play any time, even before spells and abilities resolve.)Return a friendly unit to its owner's hand. Its owner channels 1 rune exhausted."
+Origins,Rhasa the Sunderer,Chaos,Rare,10,6,I cost :rb_energy_1: less for each card in your trash.
+Origins,Ride the Wind,Chaos,Common,2,,[Action] (Play on your turn or in showdowns.)Move a friendly unit and ready it.
+Origins,Riptide Rex,Mind,Common,6,6,"When you play me, deal 6 to an enemy unit at a battlefield."
+SFD,Rocket Barrage,Mind,Uncommon,4,,"[Repeat] :rb_energy_4::rb_rune_mind: (You may pay the additional cost to repeat this spell's effect, and may make different choices.)Choose one —Deal 4 to a unit in a base.Kill a gear."
+SFD,Royal Entourage,Calm,Common,3,4,"When you play me, ready or exhaust a legend."
+SFD,Royal Guard,Order,Common,4,2,"When you play me, play a 2 :rb_might: Sand Soldier unit token here."
+SFD,Unsung Hero,Order,Uncommon,2,2,"[Deathknell] — If I was [Mighty], draw 2. (When I die, get the effect. I'm Mighty while I have 5+ :rb_might:.)"
+SFD,"Rumble, Scrapper",Mind,Epic,5,4,"Your Mechs have +1 :rb_might: (including me).When I hold, play a 3 :rb_might: Mech unit token to your base."
+SFD,"Rumble, Scrapper",Mind,Showcase,5,4,"Your Mechs have +1 :rb_might: (including me).When I hold, play a 3 :rb_might: Mech unit token to your base."
+Origins,Rune Prison,Calm,Common,2,,[Action] (Play on your turn or in showdowns.)Stun a unit._ (It doesn't deal combat damage this turn.)_
+Origins,Sabotage,Body,Rare,1,,"Choose an opponent. They reveal their hand. Choose a non-unit card from it, and recycle that card."
+SFD,Sacred Shears,Order,Rare,2,1,[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)
+Origins,Sai Scout,Chaos,Common,6,5,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)You may play me to an open battlefield."
+Origins,Salvage,Order,Uncommon,2,,[Action] (Play on your turn or in showdowns.)You may kill a gear. Draw 1.
+Origins,Scrapheap,Chaos,Uncommon,2,,"When this is played, discarded, or killed, draw 1."
+Origins,Scrapyard Champion,Fury,Uncommon,5,5,"[Legion] — When you play me, discard 2, then draw 2. (Get the effect if you've played another card this turn.)"
+SFD,Hostile Takeover,"Mind, Order",Epic,5,,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)Take control of an enemy unit at a battlefield. Ready it. (Start a combat if other enemies are there. Otherwise, conquer.)Lose control of that unit and recall it at end of turn. (Send it to base. This isn't a move.)"
+SFD,Forgefire Cape,"Calm, Mind",Epic,4,3,[Unique]** **(Your deck can have only 1 card with this name.)[Equip] :rb_rune_rainbow: (:rb_rune_rainbow:: Attach this to a unit you control.)
+SFD,Forgotten Monument,Colorless,Uncommon,,,Players can't score here until their third turn.
+SFD,Frigid Touch,Mind,Common,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Give a unit -2 :rb_might: this turn."
+SFD,Gearhead,Mind,Common,5,3,[Accelerate]_ _(You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)Each Equipment attached to me gives double its base Might bonus.
+SFD,Grandmaster at Arms,"Calm, Body",Showcase,,,":rb_energy_1:, :rb_exhaust:: Attach a detached Equipment you control to a unit you control.:rb_exhaust:: Attach an attached Equipment you control to a unit you control."
+SFD,Guards!,Order,Common,3,,[Hidden]_ (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)_Play a 2 :rb_might: Sand Soldier unit token. You may pay :rb_rune_order: to ready it.
+SFD,Hall of Legends,Colorless,Uncommon,,,"When you conquer here, you may pay :rb_energy_1: to ready your legend."
+SFD,Harpoon Squad,Chaos,Uncommon,4,4,"When I move from a battlefield, give me +2 :rb_might: this turn."
+SFD,Heart of Dark Ice,Calm,Rare,3,,:rb_exhaust:: Give a unit +3 :rb_might: this turn.
+SFD,Hexdrinker,Body,Uncommon,2,1,[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)
+SFD,Forge of the Fluft,Colorless,Uncommon,,,"While you control this battlefield, friendly legends have &quot;:rb_exhaust:: Attach an Equipment you control to a unit you control.&quot;"
+SFD,Laurent Bladekeeper,Body,Common,3,3,Ganking (I can move from battlefield to battlefield.)
+SFD,Laurent Duelist,Order,Common,4,3,[Assault 2] (+2 :rb_might: while I'm an attacker.)
+SFD,Marai Spire,Colorless,Uncommon,,,"While you control this battlefield, friendly [Repeat] costs cost :rb_energy_1: less."
+SFD,Master Bingwen,Chaos,Common,6,6,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)"
+SFD,Minefield,Colorless,Uncommon,,,"When you conquer here, put the top 2 cards of your Main Deck into your trash."
+SFD,Minotaur Reckoner,Fury,Uncommon,5,5,Units can't move to base.
+SFD,Navori Scout,Calm,Common,4,4,[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)
+SFD,On the Hunt,"Body, Chaos",Epic,1,,Ready your units.
+SFD,Perched Grimwyrm,Fury,Uncommon,4,5,Play me only to a battlefield you conquered this turn. (You can't play me anywhere else.)
+SFD,Emperor's Dais,Colorless,Uncommon,,,"When you conquer here, you may pay :rb_energy_1: and return a unit you control here to its owner's hand. If you do, play a 2 :rb_might: Sand Soldier unit token here."
+SFD,Cull,Chaos,Uncommon,1,1,[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)
+SFD,Deathgrip,Order,Uncommon,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Kill a friendly unit to give +:rb_might: equal to its Might to another friendly unit this turn. Draw 1."
+SFD,Desert's Call,Calm,Common,2,,[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Play a 2 :rb_might: Sand Soldier unit token.
+SFD,Detonate,Fury,Common,1,,Kill a gear. Its controller draws 2.
+SFD,Direwing,Body,Common,7,7,I enter ready if you control another Dragon.
+SFD,Dropboarder,Mind,Uncommon,4,4,"When you play me, if you control two or more gear, ready me."
+SFD,Eager Drakehound,Fury,Common,3,3,I enter ready.
+SFD,Eminent Benefactor,Order,Common,6,5,"When I hold, play two Gold gear tokens exhausted."
+SFD,Emperor of the Sands,"Calm, Order",Showcase,,,"Sand Soldiers you play have [Weaponmaster]. (When they're played, you may [Equip] one of your Equipment to them for :rb_rune_rainbow: less.):rb_energy_1:, :rb_exhaust:: Play a 2 :rb_might: Sand Soldier unit token to your base. Use only if you've played an Equipment this turn."
+SFD,Petricite Monument,Body,Uncommon,2,,"[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)Friendly units have [Deflect]. (Opponents must pay :rb_rune_rainbow: to choose them with a spell or ability.)"
+SFD,Emperor's Divide,Calm,Uncommon,2,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Move any number of friendly units at a battlefield to their base.
+SFD,Eye of the Herald,Order,Common,1,,[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)
+SFD,"Ezreal, Prodigy",Chaos,Showcase,3,3,"When you play me, discard 1, then draw 2.Optional additional costs you pay cost :rb_energy_1: or :rb_rune_rainbow: less."
+SFD,"Ezreal, Prodigy",Chaos,Epic,3,3,"When you play me, discard 1, then draw 2.Optional additional costs you pay cost :rb_energy_1: or :rb_rune_rainbow: less."
+SFD,Factory Recall,Chaos,Uncommon,1,,[Action] (Play on your turn or in showdowns.)Return a gear to its owner's hand.
+SFD,Fae Dragon,Body,Uncommon,7,7,"When you play me, buff up to four friendly units. (Give each a +1 :rb_might: buff if it doesn't have one.)When you spend a buff, play a Gold gear token exhausted."
+SFD,Fae Porter,Chaos,Common,4,4,"When I move to a battlefield, you may pay :rb_rune_chaos: to move a unit you control to the same battlefield."
+SFD,Feral Strength,Calm,Common,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Give a unit +2 :rb_might: this turn."
+SFD,Forecaster,Mind,Common,2,2,"Your Mechs have [Vision]. (When you play us, look at the top card of your Main Deck. You may recycle it.)"
+SFD,Spirit Wheel,Chaos,Rare,2,,"When you choose a friendly unit, you may pay :rb_energy_1: and exhaust this to draw 1."
+SFD,Sentinel Adept,Fury,Common,3,3,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)"
+SFD,Serrated Dirk,Fury,Common,1,,[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)
+Origins,"Sett, Brawler",Body,Epic,5,4,"When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)Spend my buff: Give me +4 :rb_might: this turn."
+SFD,"Sett, Brawler",Body,Showcase,5,4,"When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)Spend my buff: Give me +4 :rb_might: this turn."
+SFD,Show of Strength,Body,Uncommon,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Draw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ :rb_might:.)"
+SFD,Shurelya's Requiem,"Calm, Mind",Epic,4,2,"[Unique]** **(Your deck can have only 1 card with this name.)[Equip] :rb_rune_rainbow: (:rb_rune_rainbow:: Attach this to a unit you control.)When you play this, ready your units."
+SFD,Simian Ancestor,Calm,Uncommon,5,5,"When you buff me, ready me."
+SFD,Skyfall of Areion,Fury,Epic,3,2,[Equip] :rb_energy_1::rb_rune_fury: (:rb_energy_1::rb_rune_fury:: Attach this to a unit you control.)
+SFD,"Soraka, Wanderer",Order,Showcase,4,4,"I must be assigned combat damage last.If another unit you control here would die, if it has less Might than me, instead heal it, exhaust it, and recall it. (Send it to base. This isn't a move.)"
+SFD,"Soraka, Wanderer",Order,Showcase,4,4,"I must be assigned combat damage last.If another unit you control here would die, if it has less Might than me, instead heal it, exhaust it, and recall it. (Send it to base. This isn't a move.)"
+SFD,Seat of Power,Colorless,Uncommon,,,"When you conquer here, draw 1 for each other battlefield you or allies control."
+SFD,Sudden Storm,Fury,Uncommon,3,,"[Hidden]** **(Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Deal 2 to a unit at a battlefield. If it's attacking, deal 4 to it instead."
+SFD,Sunken Temple,Colorless,Uncommon,,,"When you conquer here with one or more [Mighty] units, you may pay :rb_energy_1: to draw 1. (A unit is Mighty while it has 5+ :rb_might:.)"
+SFD,Temporal Portal,Mind,Uncommon,3,,":rb_rune_rainbow:, :rb_exhaust:: Give the next spell you play this turn [Repeat] equal to its cost. (You may pay the additional cost to repeat the spell's effect.)"
+SFD,Temptation,Chaos,Common,2,,[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Move an enemy unit to a location where there's a unit with the same controller.
+SFD,The Papertree,Colorless,Uncommon,,,"When you hold here, each player channels 1 rune exhausted."
+SFD,Trusty Ramhound,Order,Common,2,2,"While you have another unit here, I have +1 :rb_might:."
+SFD,Veiled Temple,Colorless,Uncommon,,,"When you conquer here, you may ready a friendly gear. If it's an Equipment, you may detach it."
+SFD,Wages of Pain,Mind,Common,3,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action]_ (Play on your turn or in showdowns.)_Deal 3 to a unit at a battlefield. Play a Gold gear token exhausted.
+SFD,Zaun Punk,Order,Common,3,3,"You may kill a friendly gear as an additional cost to play me.When you play me, if you paid the additional cost, kill a gear."
+SFD,Ribbon Dancer,Calm,Common,3,3,"When I move to a battlefield, give another friendly unit +1 :rb_might: this turn."
+SFD,Pickpocket,Mind,Uncommon,3,3,"When you play me, you may kill a gear with Energy cost no more than :rb_energy_1:. If you do, play a Gold gear token exhausted."
+SFD,Plundering Poro,Mind,Common,2,2,"When I conquer, play a Gold gear token exhausted."
+SFD,Poro Snax,Calm,Uncommon,1,,"When you play this, draw 1.:rb_energy_1::rb_rune_calm:, :rb_exhaust:, Kill this: Draw 1."
+SFD,Prodigal Explorer,"Mind, Chaos",Showcase,,,:rb_exhaust:: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.
+SFD,Rabadon's Deathcrown,"Calm, Mind",Epic,4,3,[Unique]** **(Your deck can have only 1 card with this name.)[Equip] :rb_rune_rainbow: (:rb_rune_rainbow:: Attach this to a unit you control.)
+SFD,Rally the Troops,Order,Uncommon,2,,"[Action] (Play on your turn or in showdowns.)When a friendly unit is played this turn, buff it. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)Draw 1."
+SFD,Recurve Bow,Fury,Uncommon,2,,[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)
+SFD,"Renata Glasc, Mastermind",Mind,Showcase,5,4,":rb_energy_1::rb_rune_mind:: Draw 1.:rb_energy_4::rb_rune_mind::rb_rune_mind::rb_rune_mind::rb_rune_mind:, :rb_exhaust:: Score 1 point.Use my abilities only while I'm at a battlefield."
+SFD,"Renata Glasc, Mastermind",Mind,Epic,5,4,":rb_energy_1::rb_rune_mind:: Draw 1.:rb_energy_4::rb_rune_mind::rb_rune_mind::rb_rune_mind::rb_rune_mind:, :rb_exhaust:: Score 1 point.Use my abilities only while I'm at a battlefield."
+SFD,Counter Strike,"Calm, Body",Epic,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Choose a unit. The next time that unit would be dealt damage this turn, prevent it. Draw 1."
+SFD,Riposte,"Body, Order",Epic,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Choose a friendly unit and a spell. Counter that spell and give that unit +:rb_might: equal to that spell's Energy cost this turn."
+SFD,Rockfall Path,Colorless,Uncommon,,,Units can't be played here.
+SFD,"Rumble, Hotheaded",Fury,Rare,4,4,"Your Mechs each have [Assault]._ (+1 :rb_might: while we're attackers.)_When I conquer, you may recycle another friendly unit to play a Mech from your trash. Reduce its Energy cost by the Might of the unit you recycled."
+SFD,"Rumble, Hotheaded",Fury,Showcase,4,4,"Your Mechs each have [Assault]._ (+1 :rb_might: while we're attackers.)_When I conquer, you may recycle another friendly unit to play a Mech from your trash. Reduce its Energy cost by the Might of the unit you recycled."
+SFD,Sandshifter,Order,Common,5,6,"When you play me, kill an enemy unit with 3 :rb_might: or less."
+SFD,Sea Monkey,Body,Common,2,2,"You may pay :rb_energy_1: as an additional cost to play me.When you play me, if you paid the additional cost, buff me. (Give me a +1 :rb_might: buff if I don't already have one.)"
+SFD,Seal of Insight,Mind,Showcase,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_mind:. (Abilities that add resources can't be reacted to.)
+SFD,Seal of Rage,Fury,Showcase,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_fury:. (Abilities that add resources can't be reacted to.)
+SFD,Seal of Unity,Order,Showcase,0,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_order:. (Abilities that add resources can't be reacted to.)
+SFD,Warmog's Armor,Body,Uncommon,1,1,[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)
+SFD,Void Drone,Fury,Common,3,3,I cost :rb_energy_2: less to play from anywhere other than your hand.
+Origins,Void Gate,Colorless,Uncommon,,,Spells and abilities affecting units here each deal 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.)
+SFD,Void Hatchling,Fury,Uncommon,2,2,"If you would reveal cards from a deck, look at the top card first. You may recycle it. Then reveal those cards."
+SFD,Void Rush,"Fury, Order",Epic,2,,"Reveal the top 2 cards of your Main Deck. You may play one of them, reducing its cost by :rb_energy_2:. Draw any you did not play this way."
+Origins,Void Seeker,Fury,Uncommon,3,,[Action] (Play on your turn or in showdowns.)Deal 4 to a unit at a battlefield. Draw 1.
+Origins,"Volibear, Furious",Fury,Showcase,10,9,"[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or ability.)When I attack, deal 5 damage split among any number of enemy units here."
+Origins,"Volibear, Furious",Fury,Epic,10,9,"[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or ability.)When I attack, deal 5 damage split among any number of enemy units here."
+Origins,"Volibear, Imposing",Body,Rare,12,10,"[Shield 3] (+3 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)When an opponent moves to a battlefield other than mine, draw 1. (Bases are not battlefield.)"
+Origins,"Volibear, Imposing",Body,Showcase,12,10,"[Shield 3] (+3 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)When an opponent moves to a battlefield other than mine, draw 1. (Bases are not battlefield.)"
+Origins,Wallop,Body,Uncommon,2,,"[Action] (Play on your turn or in showdowns.)As you play this, you may spend a buff as an additional cost. If you do, ignore this spell's cost.Ready a unit."
+SFD,Void Burrower,"Fury, Order",Rare,,,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest."
+Origins,"Warwick, Hunter",Body,Rare,6,5,"I enter ready.When I attack, kill all damaged enemy units here."
+Origins,Watchful Sentry,Mind,Common,2,1,"[Deathknell] — Draw 1. (When I die, get the effect.)"
+Origins,Whirlwind,Chaos,Uncommon,3,,"Starting with the next player, each player may return a unit to its owner's hand."
+Origins,Whiteflame Protector,Calm,Epic,8,8,"When you play me, give a unit +8 :rb_might: this turn."
+Origins,Wielder of Water,Calm,Common,3,2,"While I'm attacking or defending alone, I have +2 :rb_might:."
+Origins,Wildclaw Shaman,Body,Uncommon,4,3,"When you play me, you may spend a buff to buff me and ready me. (If I don't have a buff, I get a +1 :rb_might: buff.)"
+Origins,Wind Wall,Calm,Uncommon,3,,"[Reaction] (Play any time, even before spells and abilities resolve.)Counter a spell."
+SFD,Windsinger,Chaos,Uncommon,2,1,"Hidden (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)When you play me, you may return another unit at a battlefield with 3 :rb_might: or less to its owner's hand."
+Origins,Windswept Hillock,Colorless,Uncommon,,,Units here have [Ganking]. (They can move from battlefield to battlefield.)
+Origins,Vengeance,Order,Uncommon,4,,Kill a unit.
+Origins,Unyielding Spirit,Body,Uncommon,1,,"[Reaction]_ (Play any time, even before spells and abilities resolve.)_Prevent all spell and ability damage this turn."
+SFD,Vanguard Armory,Order,Uncommon,7,,:rb_exhaust:: Play three 1 :rb_might: Recruit unit tokens. (You may play them to different locations.)
+Proving Grounds,Vanguard Attendant,Order,Common,6,5,I enter ready.
+Origins,Vanguard Captain,Order,Common,3,3,"[Legion] — When you play me, play two 1 :rb_might: Recruit unit tokens here._ (Get the effect if you've played another card this turn.)_"
+Origins,Vanguard Helm,Order,Uncommon,2,,"When a buffed friendly unit dies, buff another friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Vanguard Sergeant,Order,Common,4,4,
+SFD,"Vayne, Hunter",Fury,Showcase,4,2,"[Assault 3]_ (+3 :rb_might: while I'm an attacker.)_If an opponent controls a battlefield, I enter ready.When I conquer, you may pay :rb_energy_1: to return me to my owner's hand."
+SFD,"Vayne, Hunter",Fury,Showcase,4,2,"[Assault 3]_ (+3 :rb_might: while I'm an attacker.)_If an opponent controls a battlefield, I enter ready.When I conquer, you may pay :rb_energy_1: to return me to my owner's hand."
+Origins,"Vayne, Hunter",Fury,Rare,4,2,"[Assault 3]_ (+3 :rb_might: while I'm an attacker.)_If an opponent controls a battlefield, I enter ready.When I conquer, you may pay :rb_energy_1: to return me to my owner's hand."
+Origins,Wizened Elder,Calm,Uncommon,4,4,"While I'm buffed, I have an additional +1 :rb_might:."
+SFD,Veteran Poro,Body,Common,2,2,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)"
+SFD,"Vex, Cheerless",Chaos,Rare,5,5,"While I'm in combat, friendly spells cost :rb_energy_1::rb_rune_rainbow: less to a minimum of :rb_energy_1:, and enemy spells cost :rb_energy_1::rb_rune_rainbow: more."
+Origins,"Vi, Destructive",Fury,Rare,2,3,[Ganking] (I can move from battlefield to battlefield.)Recycle 1 from your trash: Give me +1 :rb_might: this turn.
+Origins,"Viktor, Innovator",Mind,Rare,4,3,"When you play a card on an opponent's turn, play a 1 :rb_might: Recruit unit token in your base."
+Origins,"Viktor, Innovator",Mind,Showcase,4,3,"When you play a card on an opponent's turn, play a 1 :rb_might: Recruit unit token in your base."
+Origins,"Viktor, Leader",Order,Epic,4,4,"When another non-Recruit unit you control dies, play a 1 :rb_might: Recruit unit token into your base."
+Origins,"Viktor, Leader",Order,Showcase,4,4,"When another non-Recruit unit you control dies, play a 1 :rb_might: Recruit unit token into your base."
+Origins,Vilemaw's Lair,Colorless,Uncommon,,,Units can't move from here to base.
+SFD,Void Burrower,"Fury, Order",Showcase,,,"When you conquer, you may exhaust me to reveal the top 2 cards of your Main Deck. You may play one. Then recycle the rest."
+SFD,Beast Below,Chaos,Uncommon,7,8,"When you play me, return another friendly unit and an enemy unit to their owners' hands."
+SFD,Ancient Warmonger,Chaos,Uncommon,5,4,[Accelerate] _(Y_ou may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)I have [Assault] equal to the number of enemy units here. (+1 :rb_might: while I'm an attacker for each instance of Assault.)
+SFD,Angle Shot,Fury,Uncommon,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Choose a unit and an Equipment with the same controller. Attach that Equipment to that unit or detach that Equipment from that unit. Draw 1."
+SFD,"Aphelios, Exalted",Calm,Showcase,4,4,"When you attach an Equipment to me, choose one that hasn't been chosen this turn —Ready 2 runes.Channel 1 rune exhausted.Buff a friendly unit."
+SFD,"Aphelios, Exalted",Calm,Showcase,4,4,"When you attach an Equipment to me, choose one that hasn't been chosen this turn —Ready 2 runes.Channel 1 rune exhausted.Buff a friendly unit."
+SFD,Arcane Shift,"Mind, Chaos",Epic,3,,"[Action] (Play on your turn or in showdowns.)Banish a friendly unit, then its owner plays it, ignoring its cost. Deal 3 to an enemy unit at a battlefield. Banish this."
+SFD,Arise!,"Calm, Order",Epic,6,,Play a 2 :rb_might: Sand Soldier unit token for each Equipment you control. Then ready two of them.
+SFD,Armed Assailant,Fury,Common,6,6,"[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)"
+SFD,Assembly Rig,Fury,Rare,4,,":rb_energy_1::rb_rune_fury:, Recycle a unit from your trash, :rb_exhaust:: Play a 3 :rb_might: Mech unit token to your base."
+SFD,Battering Ram,Fury,Uncommon,5,5,"I cost :rb_energy_1: less for each card you've played this turn, to a minimum of :rb_energy_1:."
+SFD,Battle Mistress,"Body, Chaos",Showcase,,,"When you recycle a rune, you may exhaust me to play a Gold gear token exhausted.When one or more enemy units die, ready me."
+SFD,"Akshan, Mischievous",Body,Rare,4,4,"[Weaponmaster]You may pay :rb_rune_body::rb_rune_body: as an additional cost to play me.When you play me, if you paid the additional cost, move an enemy gear to your base. You control it until I leave the board. If it's an Equipment, attach it to me."
+SFD,Black Market Broker,Chaos,Common,3,3,"When you play a card from face down, play a Gold gear token exhausted."
+SFD,Blast Corps Cadet,Fury,Uncommon,2,2,"You may pay :rb_energy_1::rb_rune_fury: as an additional cost to play me.When you play me, if you paid the additional cost, deal 2 to a unit at a battlefield."
+SFD,Blood Money,Order,Uncommon,2,,"[Action] (Play on your turn or in showdowns.)Kill a unit at a battlefield with 2 :rb_might: or less. If it was an enemy unit, play a Gold gear token exhausted. If it was a friendly unit, play two Gold gear tokens exhausted."
+SFD,Blood Rush,Fury,Common,1,,[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_1: (You may pay the additional cost to repeat this spell's effect.)Give a unit [Assault 2]. (+2 :rb_might: while it's an attacker.)
+SFD,Bushwhack,Fury,Common,2,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)Friendly units enter ready this turn. Play a Gold gear token exhausted.
+SFD,Chem-Baroness,"Mind, Order",Showcase,,,"When you or an ally hold, you may exhaust me to play a Gold gear token exhausted.While your score is within 3 points of the Victory Score, your Gold [ADD] an additional :rb_energy_1:."
+SFD,Cloth Armor,Mind,Common,1,,"[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)"
+SFD,Combat Chef,Body,Common,5,5,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)"
+SFD,Corrupt Enforcer,Chaos,Common,3,4,"When I move to a battlefield, discard 1.When I win a combat, draw 1."
+Proving Grounds,"Yi, Meditative",Calm,Rare,5,4,"While you have 8+ runes, I have +4 :rb_might:."
+SFD,World Atlas,Mind,Rare,3,2,[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)
+Origins,Wraith of Echoes,Mind,Rare,6,5,"The first time a friendly unit dies each turn, draw 1."
+Proving Grounds,Wuju Bladesman - Starter,"Calm, Body",Rare,,,"While a friendly unit defends alone, it gets +2 :rb_might:."
+SFD,"Xin Zhao, Vigilant",Order,Rare,3,4,[Tank] (I must be assigned combat damage first.)I enter ready if you have two or more other units in your base.
+Origins,"Yasuo, Remorseful",Calm,Rare,6,6,"When I attack, deal damage equal to my Might to an enemy unit here."
+Origins,"Yasuo, Remorseful",Calm,Showcase,6,6,"When I attack, deal damage equal to my Might to an enemy unit here."
+Origins,"Yasuo, Windrider",Chaos,Showcase,5,4,"[Ganking] (I can move from battlefield to battlefield.)The third time I move in a turn, you score 1 point."
+Origins,"Yasuo, Windrider",Chaos,Epic,5,4,"[Ganking] (I can move from battlefield to battlefield.)The third time I move in a turn, you score 1 point."
+Proving Grounds,"Yi, Honed",Body,Epic,7,6,[Ganking] (I can move from battlefield to battlefield.)I enter ready.
+Origins,Poro Herder,Calm,Uncommon,3,3,"When you play me, if you control a Poro, buff me and draw 1. (If I don't have a buff, I get a +1 :rb_might: buff.)"
+SFD,"Yone, Blademaster",Body,Rare,5,5,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)When I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base."
+SFD,"Yone, Blademaster",Body,Showcase,5,5,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)When I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base."
+SFD,"Yone, Blademaster",Body,Showcase,5,5,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)When I conquer an open battlefield, deal damage equal to my Might to an enemy unit in a base."
+SFD,Yordle Explorer,Body,Common,4,4,"When you play a card with Power cost :rb_rune_rainbow::rb_rune_rainbow: or more, draw 1."
+Origins,Zaun Warrens,Colorless,Uncommon,,,"When you conquer here, discard 1, then draw 1."
+Origins,Zaunite Bouncer,Chaos,Uncommon,4,2,"When you play me, return another unit at a battlefield to its owner's hand."
+Origins,Zenith Blade,"Calm, Order",Epic,3,,[Action] (Play on your turn or in showdowns.)Stun an enemy unit at a battlefield. You may move a friendly unit to that enemy unit's battlefield._ (A stunned unit doesn't deal combat damage this turn.)_
+Proving Grounds,Zephyr Sage,Calm,Uncommon,6,6,[Shield] (+1 :rb_might: while I'm a defender.)
+Origins,Zhonya's Hourglass,Calm,Rare,2,,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)The next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)"
+Origins,Divine Judgment,Order,Epic,7,,"Each player chooses 2 units, 2 gear, 2 runes, and 2 cards in their hands. Recycle the rest."
+Origins,Daughter of the Void,"Fury, Mind",Showcase,,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_rainbow:. Use only to play spells. (Abilities that add resources can't be reacted to.)
+SFD,Dauntless Vanguard,Body,Common,4,4,You may play me to an occupied enemy battlefield.
+Origins,Dazzling Aurora,Body,Epic,9,,"At the end of your turn, reveal cards from the top of your Main Deck until you reveal a unit. Play it, ignoring its cost, and recycle the rest."
+Origins,Deadbloom Predator,Body,Epic,8,8,[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)You may play me to an occupied enemy battlefield.
+Proving Grounds,Decisive Strike,"Body, Order",Epic,5,,[Action] (Play on your turn or in showdowns.)Give friendly units +2 :rb_might: this turn.
+SFD,Defiant Dance,"Calm, Chaos",Epic,1,,"[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +2 :rb_might: this turn and another unit -2 :rb_might: this turn."
+Origins,Defy,Calm,Common,1,,"[Reaction] (Play any time, even before spells and abilities resolve.)Counter a spell that costs no more than :rb_energy_4: and no more than :rb_rune_rainbow:."
+SFD,Disarming Rake,Calm,Common,3,2,"When you play me, you may kill a gear."
+Origins,Discipline,Calm,Uncommon,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +2 :rb_might: this turn. Draw 1."
+Origins,Disintegrate,Fury,Common,4,,"[Action] (Play on your turn or in showdowns.)Deal 3 to a unit at a battlefield. If this kills it, draw 1."
+Origins,Daughter of the Void,"Fury, Mind",Showcase,,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_rainbow:. Use only to play spells. (Abilities that add resources can't be reacted to.)
+SFD,Doran's Blade,Body,Common,2,2,[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)
+SFD,Doran's Ring,Chaos,Common,1,1,[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)
+SFD,Doran's Shield,Calm,Common,1,1,[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)
+SFD,Downwell,Chaos,Epic,8,,Return all units and gear to their owners' hands.
+Origins,"Dr. Mundo, Expert",Mind,Rare,8,6,"My Might is increased by the number of cards in your trash.At the start of your Beginning Phase, recycle 3 from your trash."
+SFD,Drag Under,Order,Uncommon,5,,[Action] (Play on your turn or in showdowns.)I cost :rb_energy_2: less to play from anywhere other than your hand.Kill a unit at a battlefield.
+Origins,Dragon's Rage,"Calm, Body",Epic,4,,Move an enemy unit. Then choose another enemy unit at its destination. They deal damage equal to their Mights to each other.
+SFD,"Draven, Audacious",Chaos,Epic,6,6,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)The first time I win a combat each turn, you score 1 point.When I die in combat, choose an opponent. They score 1 point."
+SFD,"Draven, Audacious",Chaos,Showcase,6,6,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)The first time I win a combat each turn, you score 1 point.When I die in combat, choose an opponent. They score 1 point."
+Origins,Dangerous Duo,Fury,Uncommon,3,3,"[Legion] — When you play me, give a unit +2 :rb_might: this turn. (Get the effect if you've played another card this turn.)"
+Origins,Commander Ledros,Order,Rare,6,8,"As you play me, you may kill any number of friendly units as an additional cost. Reduce my cost by :rb_rune_order: for each killed this way.[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)"
+Origins,Confront,Body,Common,2,,[Action] (Play on your turn or in showdowns.)Units you play this turn enter ready. Draw 1.
+Origins,Consult the Past,Mind,Common,4,,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Reaction] (Play any time, even before spells and abilities resolve.)Draw 2."
+Origins,Convergent Mutation,Mind,Rare,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Choose a friendly unit. If its Might is less than another friendly unit's, its Might becomes the Might of that friendly unit this turn."
+SFD,Corina Veraza,Order,Epic,7,6,"[Accelerate] (You may pay :rb_energy_1::rb_rune_order: as an additional cost to have me enter ready.)When I move to a battlefield, play three 1 :rb_might: Recruit unit tokens here."
+Origins,Crackshot Corsair,Body,Common,3,3,"When I attack, deal 1 to an enemy unit here."
+Origins,Cruel Patron,Order,Common,4,6,"As an additional cost to play me, kill a friendly unit."
+Origins,Cull the Weak,Order,Common,2,,Each player kills one of their units.
+SFD,Danger Zone,"Fury, Mind",Epic,1,,"[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_1::rb_rune_rainbow: (You may pay the additional cost to repeat this spell's effect.)Give your Mechs +1 :rb_might: this turn."
+Origins,"Draven, Showboat",Fury,Rare,5,3,My Might is increased by your points.
+Origins,Daring Poro,Order,Common,2,2,[Assault] (+1 :rb_might: while I'm an attacker.)
+Origins,"Darius, Executioner",Order,Showcase,6,6,"[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 :rb_might: here."
+SFD,"Darius, Executioner",Order,Showcase,6,6,"[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 :rb_might: here."
+Origins,"Darius, Executioner",Order,Epic,6,6,"[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 :rb_might: here."
+SFD,"Darius, Executioner",Order,Showcase,6,6,"[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 :rb_might: here."
+Origins,"Darius, Trifarian",Fury,Showcase,5,5,"When you play your second card in a turn, give me +2 :rb_might: this turn and ready me."
+Origins,"Darius, Trifarian",Fury,Rare,5,5,"When you play your second card in a turn, give me +2 :rb_might: this turn and ready me."
+Proving Grounds,Dark Child - Starter,"Fury, Chaos",Rare,,,"At the end of your turn, ready 2 runes."
+Origins,Daughter of the Void,"Fury, Mind",Rare,,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_rainbow:. Use only to play spells. (Abilities that add resources can't be reacted to.)
+SFD,Fire Below the Mountain,"Calm, Mind",Rare,,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_rainbow:. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)
+SFD,Ferrous Forerunner,Fury,Rare,6,6,"[Deathknell] — Play two 3 :rb_might: Mech unit tokens to your base. (When I die, get the effect.)"
+Origins,Fight or Flight,Chaos,Common,2,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Move a unit from a battlefield to its base.
+Proving Grounds,Final Spark,"Mind, Order",Epic,8,,[Action] (Play on your turn or in showdowns.)Deal 8 to a unit.
+Origins,Find Your Center,Calm,Common,3,,"[Action] (Play on your turn or in showdowns.)If an opponent's score is within 3 points of the Victory Score, this costs :rb_energy_2: less.Draw 1 and channel 1 rune exhausted."
+SFD,"Fiora, Peerless",Body,Showcase,3,3,"When I attack or defend one on one, double my Might this combat."
+SFD,"Fiora, Peerless",Body,Rare,3,3,"When I attack or defend one on one, double my Might this combat."
+Origins,"Fiora, Victorious",Order,Rare,4,4,"While I'm [Mighty], I have [Deflect], [Ganking], and [Shield]. (I'm Mighty while I have 5+ :rb_might:.)"
+SFD,"Fiora, Worthy",Order,Showcase,3,3,"When a unit you control becomes [Mighty], you may pay :rb_rune_order: to ready it. (A unit is Mighty while it has 5+ :rb_might:.)"
+SFD,"Fiora, Worthy",Order,Epic,3,3,"When a unit you control becomes [Mighty], you may pay :rb_rune_order: to ready it. (A unit is Mighty while it has 5+ :rb_might:.)"
+SFD,Fire Below the Mountain,"Calm, Mind",Showcase,,,:rb_exhaust:: [Reaction] — [Add] :rb_rune_rainbow:. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)
+Origins,Falling Star,Fury,Rare,2,,Do this twice:Deal 3 to a unit. (You can choose different units.)
+Proving Grounds,Firestorm,Fury,Uncommon,6,,Deal 3 to all enemy units at a battlefield.
+Origins,First Mate,Body,Common,3,3,"When you play me, ready another unit."
+SFD,"Fizz, Trickster",Chaos,Rare,3,3,"When you play me, you may play a spell from your trash with Energy cost no more than :rb_energy_3:, ignoring its Energy cost. Recycle that spell after you play it. (You must still pay its Power cost.)"
+Origins,Flame Chompers,Fury,Common,3,3,"When you discard me, you may pay :rb_rune_fury: to play me."
+Proving Grounds,Flash,Chaos,Common,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Move up to 2 friendly units to base."
+Origins,Flurry of Blades,Body,Common,1,,"[Reaction] (Play any time, even before spells and abilities resolve.)Deal 1 to all units at battlefields."
+Origins,Forge of the Future,Order,Common,2,,"When you play this, play a 1 :rb_might: Recruit unit token at your base.Kill this: Recycle up to 4 cards from trashes."
+Origins,Fortified Position,Colorless,Uncommon,,,"When you defend here, choose a unit. It gains [Shield 2] this combat. (+2 :rb_might: while it's a defender.)"
+Origins,Fox-Fire,"Calm, Mind",Epic,3,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Kill any number of units at a battlefield with total Might 4 or less.
+SFD,Emperor of the Sands,"Calm, Order",Rare,,,"Your Sand Soldiers have [Weaponmaster].:rb_energy_1:, :rb_exhaust:: Play a 2 :rb_might: Sand Soldier unit token to your base. Use only if you've played an Equipment this turn."
+SFD,"Draven, Vanquisher",Fury,Rare,4,4,"When I win a combat, play a Gold gear token exhausted.When I attack or defend, you may pay :rb_rune_fury:. If you do, give me +2 :rb_might: this turn."
+SFD,"Draven, Vanquisher",Fury,Showcase,4,4,"When I win a combat, play a Gold gear token exhausted.When I attack or defend, you may pay :rb_rune_fury:. If you do, give me +2 :rb_might: this turn."
+Origins,Dune Drake,Body,Common,5,5,"When I attack, give me +2 :rb_might: if there is a ready enemy unit here."
+SFD,Dunebreaker,Fury,Epic,7,7,"If you have two or fewer cards in your hand, I enter ready.When I hold, draw 2."
+Origins,Eager Apprentice,Mind,Common,3,3,"While I'm at a battlefield, the Energy costs for spells you play is reduced by :rb_energy_1:, to a minimum of :rb_energy_1:."
+Origins,Eclipse Herald,Calm,Uncommon,7,7,"When you stun an enemy unit, ready me and give me +1 :rb_might: this turn."
+SFD,Edge of Night,Chaos,Rare,3,2,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)When you play this from face down, attach it to a unit you control here.[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)"
+Origins,"Ekko, Recurrent",Mind,Rare,5,5,"[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)[Deathknell] — Recycle me to ready your runes. (When I die, get the effect.)"
+Origins,Ember Monk,Chaos,Common,4,4,"When you play a card from [Hidden], give me +2 :rb_might: this turn."
+Origins,Clockwork Keeper,Calm,Common,2,2,"As you play me, you may pay :rb_rune_calm: as an additional cost. If you do, draw 1."
+Origins,En Garde,Calm,Common,1,,"[Reaction] (Play any time, even before spells and abilities resolve.)Give a friendly unit +1 :rb_might: this turn, then an additional +1 :rb_might: this turn if it is the only unit you control there."
+Origins,Energy Conduit,Mind,Uncommon,3,,:rb_exhaust:: [Reaction] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to.)
+SFD,Experimental Hexplate,Mind,Uncommon,1,1,[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)
+SFD,"Ezreal, Dashing",Mind,Showcase,4,3,"When I attack or defend, deal damage equal to my Might to an enemy unit here.I don't deal combat damage.:rb_rune_mind:: [Action] — Move me to your base."
+SFD,"Ezreal, Dashing",Mind,Rare,4,3,"When I attack or defend, deal damage equal to my Might to an enemy unit here.I don't deal combat damage.:rb_rune_mind:: [Action] — Move me to your base."
+Origins,Facebreaker,Order,Uncommon,2,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Stun a friendly unit and an enemy unit at the same battlefield. (They don't deal combat damage this turn.)
+Origins,Fading Memories,Chaos,Uncommon,4,,"Give a unit at a battlefield or a gear [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)"
+Origins,Faithful Manufactor,Order,Common,3,2,"When you play me, play a 1 :rb_might: Recruit unit token here."
+Origins,Falling Comet,Mind,Common,5,,[Action] (Play on your turn or in showdowns.)Deal 6 to a unit at a battlefield.
+SFD,"Bard, Mercurial",Mind,Rare,4,4,"You may exhaust your legend as an additional cost to play me.When you play me, if you paid the additional cost, move any number of your units to an open battlefield."
+Origins,Ava Achiever,Mind,Rare,5,4,"When I attack, you may pay :rb_rune_mind: to play a card with [Hidden] from your hand here, ignoring its cost."
+SFD,"Azir, Ascendant",Calm,Showcase,6,6,":rb_rune_calm:: [Action] — Choose a unit you control. Move me to its location and it to my original location. If it's equipped, you may attach one of its Equipment to me. Use only once per turn."
+SFD,"Azir, Ascendant",Calm,Rare,6,6,":rb_rune_calm:: [Action] — Choose a unit you control. Move me to its location and it to my original location. If it's equipped, you may attach one of its Equipment to me. Use only once per turn."
+SFD,"Azir, Sovereign",Order,Epic,4,4,"[Accelerate] (You may pay :rb_energy_1::rb_rune_order: as an additional cost to have me enter ready.)When I attack, you may move any number of your token units to this battlefield."
+SFD,"Azir, Sovereign",Order,Showcase,4,4,"[Accelerate] (You may pay :rb_energy_1::rb_rune_order: as an additional cost to have me enter ready.)When I attack, you may move any number of your token units to this battlefield."
+SFD,B.F. Sword,Order,Uncommon,4,3,[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)
+Origins,Back to Back,Order,Common,3,,"[Reaction] (Play any time, even before spells and abilities resolve.)Give two friendly units each +2 :rb_might: this turn."
+Origins,Back-Alley Bar,Colorless,Uncommon,,,"When a unit moves from here, give it +1 :rb_might: this turn."
+Origins,Baited Hook,Order,Epic,3,,":rb_energy_1::rb_rune_order:, :rb_exhaust:: Kill a friendly unit. Look at the top 5 cards of your Main Deck. You may play a unit from among them that has Might up to 1 more than the killed unit, ignoring its cost. Then recycle the rest."
+Origins,Bandle Tree,Colorless,Uncommon,,,You may hide an additional card here.
+SFD,Aspiring Engineer,Mind,Common,3,3,"When you play me, return a gear from your trash to your hand."
+SFD,Battle Mistress,"Body, Chaos",Rare,,,"When you recycle a rune, you may exhaust me to play a Gold gear token exhausted.When one or more enemy units die, ready me."
+SFD,Bellows Breath,Mind,Rare,1,,[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_1::rb_rune_mind: (You may pay the additional cost to repeat this spell's effect.)Deal 1 to up to three units at the same location.
+Origins,Bilgewater Bully,Body,Common,6,6,"While I'm buffed, I have [Ganking]. (I can move from battlefield to battlefield.)"
+SFD,Blade Dancer,"Calm, Chaos",Rare,,,"When you choose a friendly unit, you may exhaust me and pay :rb_rune_rainbow: to ready it.When you conquer, you may pay :rb_energy_1: to ready me."
+SFD,Blade Dancer,"Calm, Chaos",Showcase,,,"When you choose a friendly unit, you may exhaust me and pay :rb_rune_rainbow: to ready it.When you conquer, you may pay :rb_energy_1: to ready me."
+SFD,Blade of the Ruined King,Order,Epic,3,4,"[Equip] — :rb_rune_order:, Kill a friendly unit (Pay the cost: Attach this to a unit you control.)"
+Proving Grounds,Blast of Power,Order,Common,6,,[Action] (Play on your turn or in showdowns.)Kill a unit at a battlefield.
+Origins,Blastcone Fae,Mind,Uncommon,2,2,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)When you play me, give a unit -2 :rb_might: this turn, to a minimum of 1 :rb_might:."
+Origins,Blazing Scorcher,Fury,Common,5,5,[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)
+SFD,Altar of Memories,Order,Rare,2,,"When a friendly unit dies, you may exhaust me to draw 1, then put a card from your hand on the top or bottom of your Main Deck."
+Origins,Adaptatron,Calm,Uncommon,4,3,"When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)"
+SFD,Against the Odds,Fury,Common,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Give a friendly unit at a battlefield +2 :rb_might: this turn for each enemy unit there."
+Origins,"Ahri, Alluring",Calm,Showcase,5,4,"When I hold, you score 1 point."
+Origins,"Ahri, Alluring",Calm,Rare,5,4,"When I hold, you score 1 point."
+Origins,"Ahri, Inquisitive",Mind,Epic,3,3,"When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:."
+SFD,"Ahri, Inquisitive",Mind,Showcase,3,3,"When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:."
+SFD,"Ahri, Inquisitive",Mind,Showcase,3,3,"When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:."
+Origins,"Ahri, Inquisitive",Mind,Showcase,3,3,"When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:."
+Origins,Albus Ferros,Order,Rare,4,3,"When you play me, spend any number of buffs. For each buff spent, channel 1 rune exhausted."
+Origins,Blind Fury,Fury,Rare,4,,"[Action] (Play on your turn or in showdowns.)Each opponent reveals the top card of their Main Deck. Choose one and play it, ignoring its cost. Then recycle the rest."
+Origins,Altar to Unity,Colorless,Uncommon,,,"When you hold here, play a 1 :rb_might: Recruit unit token in your base."
+SFD,Ancient Henge,Body,Epic,2,,:rb_exhaust:: [Reaction] — Pay any amount of Energy to [Add] that much :rb_rune_rainbow:. (Abilities that add resources can't be reacted to.)
+Origins,"Anivia, Primal",Body,Rare,7,8,"When I attack, deal 3 to all enemy units here."
+Proving Grounds,"Annie, Fiery",Fury,Epic,5,4,Your spells and abilities deal 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.)
+Proving Grounds,"Annie, Stubborn",Chaos,Rare,4,3,"When you play me, return a spell from your trash to your hand."
+SFD,"Aphelios, Exalted",Calm,Rare,4,4,"When you attach an Equipment to me, choose one that hasn't been chosen this turn —Ready 2 runes.Channel 1 rune exhausted.Buff a friendly unit."
+SFD,Apprentice Smith,Calm,Uncommon,2,2,"When I move, reveal the top card of your Main Deck. If it's a gear, draw it. Otherwise, recycle it."
+Origins,Arena Bar,Body,Common,3,,":rb_exhaust:: Buff an exhausted friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Aspirant's Climb,Colorless,Uncommon,,,Increase the points needed to win the game by 1.
+Origins,Cemetery Attendant,Chaos,Common,3,3,"When you play me, return a unit from your trash to your hand."
+Origins,"Caitlyn, Patrolling",Calm,Rare,3,3,I must be assigned combat damage last.:rb_exhaust:: Deal damage equal to my Might to a unit at a battlefield. Use this ability only while I'm at a battlefield.
+Origins,Call to Glory,Order,Common,3,,"[Reaction] (Play any time, even before spells and abilities resolve.)As you play this, you may spend a buff as an additional cost. If you do, ignore this spell's cost.Give a unit +3 :rb_might: this turn."
+SFD,Called Shot,Chaos,Common,0,,[Action] (Play on your turn or in showdowns.)[Repeat] :rb_rune_chaos: (You may pay the additional cost to repeat this spell's effect.)Look at the top 2 cards of your Main Deck. Draw one and recycle the other.
+Origins,Calm Rune,Calm,Showcase,,,
+Origins,Calm Rune,Calm,Common,,,
+Origins,Cannon Barrage,Body,Common,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Deal 2 to all enemy units in combat."
+Origins,Captain Farron,Fury,Uncommon,4,5,Other friendly units here have [Assault]. (+1 :rb_might: while they're attackers.)
+SFD,Card Sharp,Mind,Rare,3,3,"When you play me, you and each opponent may play a Gold gear token exhausted. For each opponent who did, you play a Gold gear token exhausted."
+Origins,Carnivorous Snapvine,Body,Rare,5,6,"When you play me, choose an enemy unit at a battlefield. We deal damage equal to our Mights to each other."
+Origins,Catalyst of Aeons,Body,Uncommon,4,,"Channel 2 runes exhausted. If you couldn't channel 2 runes this way, draw 1."
+Origins,Bullet Time,"Body, Chaos",Epic,1,,[Action] (Play on your turn or in showdowns.)Pay any amount of :rb_rune_rainbow: to deal that much damage to all enemy units at a battlefield.
+Origins,Challenge,Body,Common,2,,[Action] (Play on your turn or in showdowns.)Choose a friendly unit and an enemy unit. They deal damage equal to their Mights to each other.
+Origins,Chaos Rune,Chaos,Common,,,
+Origins,Chaos Rune,Chaos,Showcase,,,
+Origins,Charm,Calm,Common,1,,Move an enemy unit.
+SFD,Chem-Baroness,"Mind, Order",Rare,,,"When you or an ally hold, you may exhaust me to play a Gold gear token exhausted.While your score is within 3 points of the Victory Score, your Gold [ADD] an additional :rb_energy_1:."
+SFD,Chemtech Cask,Mind,Common,1,,"When you play a spell on an opponent's turn, you may exhaust me to play a Gold gear token exhausted."
+Origins,Chemtech Enforcer,Fury,Common,2,2,"[Assault 2] (+2 :rb_might: while I'm an attacker.)When you play me, discard 1."
+Origins,Cithria of Cloudfield,Body,Uncommon,2,1,"When you play another unit, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)"
+Origins,Cleave,Fury,Common,1,,[Action] (Play on your turn or in showdowns.)Give a unit [Assault 3] this turn. (+3 :rb_might: while it's an attacker.)
+SFD,Boots of Swiftness,Chaos,Uncommon,3,2,[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)
+Origins,Blind Monk,"Calm, Body",Showcase,,,":rb_energy_1:, :rb_exhaust:: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Blind Monk,"Calm, Body",Showcase,,,":rb_energy_1:, :rb_exhaust:: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Blind Monk,"Calm, Body",Rare,,,":rb_energy_1:, :rb_exhaust:: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,"Blitzcrank, Impassive",Calm,Rare,5,5,"[Tank] (I must be assigned combat damage first.)When you play me to a battlefield, you may move an enemy unit to here.When I hold, return me to my owner's hand."
+Origins,Block,Calm,Uncommon,2,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Give a unit [Shield 3] and [Tank] this turn. (+3 :rb_might: while it's a defender. It must be assigned combat damage first.)
+Origins,Body Rune,Body,Showcase,,,
+Origins,Body Rune,Body,Common,,,
+SFD,Bonds of Strength,Order,Common,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Give two friendly units each +1 :rb_might: this turn."
+SFD,Boneshiver,Body,Epic,3,2,[Equip] :rb_energy_1::rb_rune_body: (:rb_energy_1::rb_rune_body:: Attach this to a unit you control.)
+SFD,Frostcoat Cub,Mind,Common,3,3,"You may pay :rb_rune_mind: as an additional cost to play me.When you play me, if you paid the additional cost, give a unit -2 :rb_might: this turn."
+Origins,Bounty Hunter,"Body, Chaos",Showcase,,,:rb_exhaust:: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)
+Origins,Bounty Hunter,"Body, Chaos",Rare,,,:rb_exhaust:: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)
+Origins,Bounty Hunter,"Body, Chaos",Showcase,,,:rb_exhaust:: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)
+Origins,Brazen Buccaneer,Fury,Common,6,5,"As you play me, you may discard 1 as an additional cost. If you do, reduce my cost by :rb_energy_2:."
+SFD,Breakneck Mech,Mind,Uncommon,8,7,Your Mechs have [Deflect] and [Ganking]. (Opponents must pay :rb_rune_rainbow: to choose us with a spell or ability. We can move from battlefield to battlefield.)I enter ready if you control another Mech.
+SFD,Brutalizer,Calm,Uncommon,2,1,[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)
+Origins,Brynhir Thundersong,Fury,Rare,6,5,"When you play me, opponents can't play cards this turn."
+SFD,Bubble Bot,Mind,Common,3,3,"When you play me, ready another friendly Mech."
+SFD,Buhru Captain,Body,Common,3,3,"When you play me, you may draw 1 or buff me. (To buff a unit, give it a +1 :rb_might: buff if it doesn't already have one.)"
+SFD,Mechanized Menace,"Fury, Mind",Showcase,,,Your Mechs have [Shield]. (+1 :rb_might: while they're defenders.)
+Proving Grounds,"Lux, Crownguard",Order,Epic,4,2,:rb_exhaust:: [Reaction] — [Add] :rb_energy_2:. Use only to play spells. (Abilities that add resources can't be reacted to.)
+Proving Grounds,"Lux, Illuminated",Mind,Rare,6,5,"When you play a spell that costs :rb_energy_5: or more, give me +3 :rb_might: this turn."
+Origins,Machine Evangel,Order,Rare,5,4,"[Deathknell] — Play three 1 :rb_might: Recruit unit tokens into your base. (When I die, get the effect.)"
+Origins,Maddened Marauder,Chaos,Rare,5,4,"[Tank] (I must be assigned combat damage first.)When you play me, move a unit from a battlefield to its base."
+Origins,Mageseeker Warden,Calm,Rare,6,5,"While I'm at a battlefield, opponents can only play units to their base.While I'm at a battlefield, spells and abilities can't ready enemy units and gear."
+Origins,Magma Wurm,Fury,Common,8,8,Other friendly units enter ready.
+Origins,"Malzahar, Fanatic",Mind,Rare,4,3,"Kill a friendly unit or gear, :rb_exhaust:: [Action] — [Add] :rb_rune_rainbow::rb_rune_rainbow:. (Use on your turn or in showdowns. Abilities that add resources can't be reacted to.)"
+SFD,Marching Orders,Body,Rare,3,,[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_3: (You may pay the additional cost to repeat this spell's effect.)Choose a friendly unit anywhere and an enemy unit at a battlefield. They deal damage equal to their Mights to each other.
+Origins,Mask of Foresight,Calm,Uncommon,2,,"When a friendly unit attacks or defends alone, give it +1 :rb_might: this turn."
+SFD,Mechanized Menace,"Fury, Mind",Rare,,,Your Mechs have [Shield]. (+1 :rb_might: while they're defenders.)
+SFD,"Lucian, Merciless",Body,Rare,3,3,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)The first time I conquer each turn, ready me."
+Origins,Meditation,Calm,Common,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)As an additional cost to play this, you may exhaust a friendly unit. If you do, draw 2. Otherwise, draw 1."
+Origins,Mega-Mech,Mind,Common,7,8,
+Proving Grounds,Might of Demacia - Starter,"Body, Order",Rare,,,"When you conquer, if you have 4+ units at that battlefield, draw 2."
+Origins,Mind Rune,Mind,Common,,,
+Origins,Mind Rune,Mind,Showcase,,,
+Origins,Mindsplitter,Chaos,Rare,7,7,"When you play me, choose an opponent. They reveal their hand. Choose a card from it, and they discard that card."
+Origins,"Miss Fortune, Buccaneer",Chaos,Rare,4,4,You may play me to an open battlefield.Friendly units may be played to open battlefields.
+Origins,"Miss Fortune, Buccaneer",Chaos,Showcase,4,4,You may play me to an open battlefield.Friendly units may be played to open battlefields.
+Origins,"Miss Fortune, Captain",Body,Epic,5,5,"[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)[Ganking] (I can move from battlefield to battlefield.)The first time I move each turn, you may ready something else that's exhausted."
+Origins,"Leona, Zealot",Calm,Showcase,6,6,"If an opponent's score is within 3 points of the Victory Score, I enter ready.Stunned enemy units here have -8 :rb_might:, to a minimum of 1 :rb_might:."
+Origins,"Lee Sin, Ascetic",Calm,Epic,5,5,[Shield]_ (+1 :rb_might: while I'm a defender.)_:rb_exhaust:: Buff me. (I get a +1 :rb_might: buff.)I can have any number of buffs.
+Origins,"Lee Sin, Ascetic",Calm,Showcase,5,5,[Shield]_ (+1 :rb_might: while I'm a defender.)_:rb_exhaust:: Buff me. (I get a +1 :rb_might: buff.)I can have any number of buffs.
+Origins,"Lee Sin, Centered",Body,Rare,6,6,[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)Other buffed friendly units at my battlefield have +2 :rb_might:.
+Origins,"Lee Sin, Centered",Body,Showcase,6,6,[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)Other buffed friendly units at my battlefield have +2 :rb_might:.
+SFD,Legion Quartermaster,Calm,Uncommon,3,4,"As an additional cost to play me, return a friendly gear to its owner's hand."
+Origins,Legion Rearguard,Fury,Common,2,2,[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)
+Origins,"Leona, Determined",Order,Rare,4,4,"[Shield] (+1 :rb_might: while I'm a defender.)When I attack, stun an enemy unit here. (It doesn't deal combat damage this turn.)"
+Origins,"Leona, Determined",Order,Showcase,4,4,"[Shield] (+1 :rb_might: while I'm a defender.)When I attack, stun an enemy unit here. (It doesn't deal combat damage this turn.)"
+Origins,"Leona, Zealot",Calm,Epic,6,6,"If an opponent's score is within 3 points of the Victory Score, I enter ready.Stunned enemy units here have -8 :rb_might:, to a minimum of 1 :rb_might:."
+Origins,"Miss Fortune, Captain",Body,Showcase,5,5,"[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)[Ganking] (I can move from battlefield to battlefield.)The first time I move each turn, you may ready something else that's exhausted."
+SFD,Lonely Poro,Calm,Common,2,2,"[Deathknell] — If I died alone, draw 1. (When I die, get the effect. I'm alone if there are no other friendly units here.)"
+SFD,Long Sword,Fury,Rare,2,2,"[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)"
+Origins,Loose Cannon,"Fury, Chaos",Rare,,,"At start of your Beginning Phase, draw 1 if you have one or fewer cards in your hand."
+Origins,Loose Cannon,"Fury, Chaos",Showcase,,,"At start of your Beginning Phase, draw 1 if you have one or fewer cards in your hand."
+Origins,Loose Cannon,"Fury, Chaos",Showcase,,,"At start of your Beginning Phase, draw 1 if you have one or fewer cards in your hand."
+SFD,Loyal Pup,Chaos,Common,3,3,"When you defend at a battlefield, you may move me there."
+SFD,"Lucian, Gunslinger",Fury,Showcase,3,2,"[Assault]_ (+1 :rb_might: while I'm an attacker.)_When I attack, deal damage equal to my [Assault] to an enemy unit here."
+SFD,"Lucian, Gunslinger",Fury,Epic,3,2,"[Assault]_ (+1 :rb_might: while I'm an attacker.)_When I attack, deal damage equal to my [Assault] to an enemy unit here."
+SFD,"Lucian, Merciless",Body,Showcase,3,3,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)The first time I conquer each turn, ready me."
+Origins,Pack of Wonders,Chaos,Uncommon,2,,":rb_exhaust:: Return another friendly gear, unit, or [Hidden] card to its owner's hand."
+Origins,Orb of Regret,Mind,Common,1,,":rb_exhaust:: Give a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:."
+Origins,Order Rune,Order,Showcase,,,
+Origins,Order Rune,Order,Common,,,
+SFD,Ornn's Forge,Colorless,Uncommon,,,"While you control this battlefield, the first friendly non-token gear played each turn costs :rb_energy_1: less."
+SFD,"Ornn, Blacksmith",Calm,Showcase,5,5,"When you play me or when I hold, look at the top 4 cards of your Main Deck. You may reveal a gear from among them and draw it. Then recycle the rest."
+SFD,"Ornn, Blacksmith",Calm,Epic,5,5,"When you play me or when I hold, look at the top 4 cards of your Main Deck. You may reveal a gear from among them and draw it. Then recycle the rest."
+SFD,"Ornn, Forge God",Mind,Rare,6,4,"[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or ability.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)I have +1 :rb_might: for each friendly gear."
+SFD,"Ornn, Forge God",Mind,Showcase,6,4,"[Deflect 2] (Opponents must pay :rb_rune_rainbow::rb_rune_rainbow: to choose me with a spell or ability.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)I have +1 :rb_might: for each friendly gear."
+Origins,Overt Operation,Body,Rare,5,,"[Action] (Play on your turn or in showdowns.)For each friendly unit, you may spend its buff to ready it. Then buff all friendly units. (Each one that doesn't have a buff gets a +1 :rb_might: buff.)"
+SFD,Overzealous Fan,Chaos,Common,2,2,"When I defend, you may kill me to move an attacking unit to its base."
+Origins,Obelisk of Power,Colorless,Uncommon,,,"At the start of each player's first Beginning Phase, that player channels 1 rune."
+Origins,Pakaa Cub,Body,Common,3,3,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)
+Origins,Party Favors,Calm,Rare,3,,"Each other player chooses Cards or Runes. For each player that chooses Cards, you and that player each draw 1. For each player that chooses Runes, you and that player each channel 1 rune exhausted."
+Origins,Peak Guardian,Order,Uncommon,6,5,"When you play me, buff me. Then, if I am at a battlefield, buff all other friendly units there. (To buff a unit, give it a +1 :rb_might: buff if it doesn't already have one.)"
+Origins,Petty Officer,Order,Common,5,5,[Assault] (+1 :rb_might: while I'm an attacker.)
+SFD,Piercing Light,Fury,Rare,2,,"[Repeat] :rb_energy_2::rb_rune_fury: (You may pay the additional cost to repeat this spell's effect.)Deal 2 to a unit at a battlefield, then deal 2 to up to one other unit."
+Origins,Pirate's Haven,Body,Uncommon,3,,"When you ready a friendly unit, give it +1 :rb_might: this turn."
+Origins,Pit Crew,Mind,Common,3,3,"When you play a gear, ready me."
+Origins,Pit Rookie,Body,Common,2,2,"When you play me, buff another friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Playful Phantom,Calm,Common,5,5,
+SFD,Needlessly Large Yordle,Calm,Rare,10,5,[Shield 5] (+5 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)I cost :rb_energy_2::rb_rune_calm: less for each point you scored from holding this turn.
+Origins,Mistfall,Body,Rare,3,,"When you buff a friendly unit, you may pay :rb_rune_body: and exhaust this to ready it."
+Origins,Mobilize,Body,Common,2,,"Channel 1 rune exhausted. If you can't, draw 1."
+Origins,Monastery of Hirana,Colorless,Uncommon,,,"When you conquer here, you may spend a buff to draw 1."
+Origins,Morbid Return,Chaos,Common,2,,[Action] (Play on your turn or in showdowns.)Return a unit from your trash to your hand.
+Origins,Mountain Drake,Body,Uncommon,9,10,
+Origins,Mushroom Pouch,Mind,Uncommon,2,,"At the start of your Beginning Phase, if you control a facedown card at a battlefield, draw 1."
+Origins,Mystic Poro,Chaos,Common,2,2,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)"
+Origins,Mystic Reversal,Calm,Epic,4,,"[Reaction] (Play any time, even before spells and abilities resolve.)Gain control of a spell. You may make new choices for it."
+Origins,Navori Fighting Pit,Colorless,Uncommon,,,"When you hold here, buff a unit here. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)"
+Origins,Lecturing Yordle,Mind,Common,3,2,"[Tank] (I must be assigned combat damage first.)When you play me, draw 1."
+Origins,Nine-Tailed Fox,"Calm, Mind",Showcase,,,"When an enemy unit attacks a battlefield you control, give it -1 :rb_might: this turn, to a minimum of 1 :rb_might:."
+Origins,Nine-Tailed Fox,"Calm, Mind",Rare,,,"When an enemy unit attacks a battlefield you control, give it -1 :rb_might: this turn, to a minimum of 1 :rb_might:."
+Origins,Nine-Tailed Fox,"Calm, Mind",Showcase,,,"When an enemy unit attacks a battlefield you control, give it -1 :rb_might: this turn, to a minimum of 1 :rb_might:."
+Origins,"Nocturne, Horrifying",Chaos,Rare,4,4,"[Ganking] (I can move from battlefield to battlefield.)When you look at cards from the top of your deck (and don't draw them) and see me, you may play me for :rb_rune_rainbow:."
+SFD,Not So Fast,Calm,Uncommon,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)Counter an enemy spell or ability that chooses a friendly unit or gear."
+Origins,Noxian Drummer,Order,Uncommon,3,3,"When I move to a battlefield, play a 1 :rb_might: Recruit unit token here. (It is also at the battlefield.)"
+Origins,Noxian Guillotine,"Fury, Order",Epic,4,,[Action]_ (Play on your turn or in showdowns.)_Choose a unit. Kill it the next time it takes damage this turn.[Legion] — Kill it now instead. (Get the effect if you've played another card this turn.)
+Origins,Noxus Hopeful,Fury,Common,4,4,[Legion] — I cost :rb_energy_2: less._ (Get the effect if you've played another card this turn.)_
+Origins,Noxus Saboteur,Fury,Uncommon,3,3,Your opponents' [Hidden] cards can't be revealed here.
+Origins,Herald of the Arcane,"Mind, Order",Rare,,,":rb_energy_1:, :rb_exhaust:: Play a 1 :rb_might: Recruit unit token."
+Origins,Guerilla Warfare,"Mind, Chaos",Epic,2,,Return up to two cards with [Hidden] from your trash to your hand. You can hide cards ignoring costs this turn.
+Origins,Gust,Chaos,Common,1,,"[Reaction] (Play any time, even before spells and abilities resolve.)Return a unit at a battlefield with 3 :rb_might: or less to its owner's hand."
+Origins,Hallowed Tomb,Colorless,Uncommon,,,"When you hold here, you may return your Chosen Champion from your trash to your Champion Zone if it is empty."
+Origins,Hand of Noxus,"Fury, Order",Rare,,,":rb_exhaust:: [Reaction], [Legion] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)"
+Origins,Hand of Noxus,"Fury, Order",Showcase,,,":rb_exhaust:: [Reaction], [Legion] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)"
+Origins,Hand of Noxus,"Fury, Order",Showcase,,,":rb_exhaust:: [Reaction], [Legion] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)"
+SFD,Hard Bargain,Chaos,Uncommon,2,,"[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Counter a spell unless its controller pays :rb_energy_2:."
+Origins,Harnessed Dragon,Order,Rare,8,6,"When you play me, kill an enemy unit."
+Origins,"Heimerdinger, Inventor",Mind,Rare,3,3,"I have all :rb_exhaust: abilities of all friendly legends, units, and gear."
+Origins,Herald of Scales,Body,Uncommon,4,3,"Your Dragons' Energy costs are reduced by :rb_energy_2:, to a minimum of :rb_energy_1:."
+SFD,Guardian of the Passage,Calm,Common,6,6,"When I hold, you may return a unit or gear from your trash to your hand."
+Origins,Herald of the Arcane,"Mind, Order",Showcase,,,":rb_energy_1:, :rb_exhaust:: Play a 1 :rb_might: Recruit unit token."
+Origins,Herald of the Arcane,"Mind, Order",Showcase,,,":rb_energy_1:, :rb_exhaust:: Play a 1 :rb_might: Recruit unit token."
+SFD,Here to Help,Body,Rare,2,,"[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)You may play a unit from hand to a battlefield you control, reducing its cost by :rb_energy_3:."
+SFD,Hextech Anomaly,Mind,Rare,3,,:rb_exhaust:: [Reaction] — Pay any amount of :rb_rune_rainbow: to [Add] that much Energy. (Abilities that add resources can't be reacted to.)
+Origins,Hextech Ray,Fury,Common,1,,[Action] (Play on your turn or in showdowns.)Deal 3 to a unit at a battlefield.
+Origins,Hidden Blade,Order,Common,2,,[Hidden] (Hide now for :rb_rune_rainbow: to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Kill a unit at a battlefield. Its controller draws 2.
+Proving Grounds,Highlander,"Calm, Body",Epic,4,,"[Reaction] (Play any time, even before spells and abilities resolve.)Choose a friendly unit. The next time it dies this turn, recall it exhausted instead. (Send it to base. This isn't a move.)"
+SFD,Honest Broker,Order,Common,2,2,"[Deathknell] — Play a Gold gear token exhausted. (When I die, get the effect.)"
+Origins,Icathian Rain,"Fury, Mind",Epic,7,,Do this 6 times:Deal 2 to a unit. (You can choose different units.)
+SFD,Glasc Mixologist,Order,Uncommon,5,5,"[Deathknell] — You may play a unit with cost no more than :rb_energy_3: and no more than :rb_rune_rainbow: from your trash, ignoring its cost. (When I die, get the effect.)"
+Origins,Fury Rune,Fury,Showcase,,,
+Origins,Fury Rune,Fury,Common,,,
+Origins,Garbage Grabber,Mind,Uncommon,2,,"Recycle 3 from your trash, :rb_energy_1:, :rb_exhaust:: Draw 1."
+Proving Grounds,"Garen, Commander",Order,Epic,6,5,Other friendly units have +1 :rb_might: here.
+Proving Grounds,"Garen, Rugged",Body,Rare,6,5,"[Assault 2], [Shield 2] (+2 :rb_might: while I'm an attacker or defender.)"
+SFD,Gem Jammer,Fury,Common,2,2,"When you play me, give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)"
+Origins,Gemcraft Seer,Mind,Uncommon,3,3,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)Other friendly units have [Vision]."
+Proving Grounds,Gentlemen's Duel,Body,Common,6,,[Action] (Play on your turn or in showdowns.)Give a friendly unit +3 :rb_might: this turn. Then choose an enemy unit. They deal damage equal to their Mights to each other.
+Origins,Get Excited!,Fury,Common,2,,[Action] (Play on your turn or in showdowns.)Discard 1. Deal its Energy cost as damage to a unit at a battlefield. (Ignore its Power cost.)
+Origins,Immortal Phoenix,Fury,Epic,3,3,"[Assault 2] (+2 :rb_might: while I'm an attacker.)When you kill a unit with a spell, you may pay :rb_energy_1::rb_rune_fury: to play me from your trash."
+SFD,Glorious Executioner,"Fury, Chaos",Rare,,,"When you win a combat, draw 1. (You win if only your units remain after combat.)"
+SFD,Glorious Executioner,"Fury, Chaos",Showcase,,,"When you win a combat, draw 1. (You win if only your units remain after combat.)"
+SFD,Gold,Colorless,Common,,,"Kill this, :rb_exhaust:: [Reaction] — [Add] :rb_rune_rainbow:. (Abilities that add resources can't be reacted to.)"
+SFD,Grand Duelist,"Body, Order",Rare,,,"When one of your units becomes [Mighty], you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)"
+SFD,Grand Duelist,"Body, Order",Showcase,,,"When one of your units becomes [Mighty], you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)"
+Origins,Grand Strategem,Order,Rare,6,,[Action] (Play on your turn or in showdowns.)Give friendly units +5 :rb_might: this turn.
+SFD,Grandmaster at Arms,"Calm, Body",Rare,,,":rb_energy_1:, :rb_exhaust:: Attach a detached Equipment you control to a unit you control.:rb_exhaust:: Attach an attached Equipment you control to a unit you control."
+Origins,Grove of the God-Willow,Colorless,Uncommon,,,"When you hold here, draw 1."
+SFD,Guardian Angel,Calm,Rare,2,1,[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)
+SFD,Kato the Arm,Body,Rare,4,3,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)When I move to a battlefield, give a friendly unit my keywords and +:rb_might: equal to my Might this turn."
+Origins,"Jinx, Demolitionist",Fury,Rare,3,4,"[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault 2] (+2 :rb_might: while I'm an attacker.)When you play me, discard 2."
+Origins,"Jinx, Rebel",Chaos,Showcase,5,5,"When you discard one or more cards, ready me and give me +1 :rb_might: this turn."
+Origins,"Jinx, Rebel",Chaos,Epic,5,5,"When you discard one or more cards, ready me and give me +1 :rb_might: this turn."
+Origins,Kadregrin the Infernal,Fury,Epic,9,9,"When you play me, draw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ :rb_might:.)"
+Origins,"Kai'Sa, Evolutionary",Mind,Showcase,6,6,"[Ganking] (I can move from battlefield to battlefield.)When I conquer, you may play a spell from your trash with Energy cost less than your points without paying its Energy cost. Then recycle it. (You must still pay its Power cost.)"
+Origins,"Kai'Sa, Evolutionary",Mind,Rare,6,6,"[Ganking] (I can move from battlefield to battlefield.)When I conquer, you may play a spell from your trash with Energy cost less than your points without paying its Energy cost. Then recycle it. (You must still pay its Power cost.)"
+Origins,"Kai'Sa, Survivor",Fury,Epic,4,4,"[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)When I conquer, draw 1."
+Origins,"Kai'Sa, Survivor",Fury,Showcase,4,4,"[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)When I conquer, draw 1."
+Origins,"Karma, Channeler",Order,Rare,6,6,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff. Runes aren't cards.)"
+Origins,"Karthus, Eternal",Order,Rare,3,3,Your [Deathknell] effects trigger an additional time.
+Origins,"Jinx, Demolitionist",Fury,Showcase,3,4,"[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault 2] (+2 :rb_might: while I'm an attacker.)When you play me, discard 2."
+Origins,"Kayn, Unleashed",Chaos,Rare,6,6,"[Ganking] (I can move from battlefield to battlefield.)If I have moved twice this turn, I don't take damage."
+Origins,King's Edict,Order,Rare,6,,"Starting with the next player, each other player chooses a unit you don't control that hasn't been chosen for this spell. Kill those units."
+Origins,Kinkou Monk,Body,Uncommon,4,4,"When you play me, buff two other friendly units. (Each one that doesn't have a buff gets a +1 :rb_might: buff.)"
+Origins,"Kog'Maw, Caustic",Chaos,Rare,3,1,"[Deathknell] — Deal 4 to all units at my battlefield. (When I die, get the effect.)"
+Origins,Kraken Hunter,Body,Rare,3,5,"[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)[Assault] (+1 :rb_might: while I'm an attacker.)As you play me, you may spend any number of buffs as an additional cost. Reduce my cost by :rb_rune_body: for each buff you spend."
+Proving Grounds,Lady of Luminosity - Starter,"Mind, Order",Rare,,,"When you play a spell that costs :rb_energy_5: or more, draw 1."
+Origins,Last Breath,"Calm, Chaos",Epic,3,,[Action] (Play on your turn or in showdowns.)Ready a friendly unit. It deals damage equal to its Might to an enemy unit at a battlefield.
+SFD,Last Rites,Chaos,Epic,3,2,"[Equip] — :rb_rune_chaos:, Recycle 2 cards from your trash (Pay the cost:** **Attach this to a unit you control.)"
+Origins,Last Stand,Calm,Rare,3,,"[Action] (Play on your turn or in showdowns.)Double a friendly unit's Might this turn. Give it [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)"
+Origins,Iron Ballista,Fury,Uncommon,3,,This enters exhausted.:rb_exhaust:: Deal 2 to a unit at a battlefield.
+Origins,Imperial Decree,Order,Uncommon,5,,"[Action] (Play on your turn or in showdowns.)When any unit takes damage this turn, kill it."
+Proving Grounds,Incinerate,Fury,Common,2,,[Action]_ (Play on your turn or in showdowns.)_Deal 2 to a unit at a battlefield.
+Origins,Invert Timelines,Chaos,Epic,3,,"Each player discards their hand, then draws 4."
+SFD,"Irelia, Fervent",Calm,Showcase,5,4,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)When you choose or ready me, give me +1 :rb_might: this turn."
+SFD,"Irelia, Fervent",Calm,Showcase,5,4,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)When you choose or ready me, give me +1 :rb_might: this turn."
+SFD,"Irelia, Fervent",Calm,Epic,5,4,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)When you choose or ready me, give me +1 :rb_might: this turn."
+SFD,"Irelia, Fervent",Calm,Showcase,5,4,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)When you choose or ready me, give me +1 :rb_might: this turn."
+SFD,"Irelia, Graceful",Chaos,Showcase,4,4,Your spells that choose me cost :rb_energy_1: or :rb_rune_rainbow: less.
+SFD,"Irelia, Graceful",Chaos,Rare,4,4,Your spells that choose me cost :rb_energy_1: or :rb_rune_rainbow: less.
+Origins,Acceptable Losses,Chaos,Uncommon,1,,[Action] (Play on your turn or in showdowns.)Each player kills one of their gear.
+SFD,Jae Medarda,Chaos,Rare,5,5,"When you choose me with a spell, draw 1."
+SFD,"Janna, Savior",Calm,Rare,3,3,"[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)When you play me, heal your units here, then move an enemy unit from here to its base."
+SFD,Jaull-Fish,Body,Uncommon,7,6,[Accelerate]_ _(You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)I cost :rb_energy_2: less for each of your [Mighty] units._ (A unit is Mighty while it has 5+ :rb_might:.)_
+SFD,"Jax, Unmatched",Calm,Rare,5,5,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)Each Equipment in your hand has [Quick-Draw]. (It gains [Reaction]. When you play it, attach it to a unit you control.)"
+SFD,"Jax, Unmatched",Calm,Showcase,5,5,"[Deflect] (Opponents must pay :rb_rune_rainbow: to choose me with a spell or ability.)Each Equipment in your hand has [Quick-Draw]. (It gains [Reaction]. When you play it, attach it to a unit you control.)"
+SFD,"Jax, Unrelenting",Body,Epic,4,3,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)When you attach an Equipment to me, you may pay :rb_energy_1: to draw 1."
+SFD,"Jax, Unrelenting",Body,Showcase,4,3,"[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for :rb_rune_rainbow: less, even if it's already attached.)When you attach an Equipment to me, you may pay :rb_energy_1: to draw 1."
+SFD,"Jayce, Man of Progress",Mind,Rare,4,4,"When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than :rb_energy_7: from hand this turn, ignoring its Energy cost. (You must still pay its Power cost.)"
+Origins,Jeweled Colossus,Mind,Common,5,5,"[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)[Shield]** **(+1 :rb_might: while I'm a defender.)"

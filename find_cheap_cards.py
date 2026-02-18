@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 # Common Riftbound expansion mapping
 EXPANSIONS = {
     'origins': 4166,
-    'promos': 4167,
-    'proving_grounds': 4275,
-    'arcane': 4289,
+    'proving grounds': 4275,
+    'sfd': 4299,
     'spiritforged': 4299,
+    'arcane': 4289,
     'unleashed': 4425
 }
 

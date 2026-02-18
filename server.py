@@ -13,11 +13,11 @@ templates = Jinja2Templates(directory="templates")
 RARITIES = ["Common", "Uncommon", "Rare", "Epic"]
 DOMAINS = ["Fury", "Calm", "Mind", "Body", "Chaos", "Order"]
 EXPANSIONS = [
-    {"name": "Origins", "code": "origins"},
-    {"name": "Proving Grounds", "code": "proving_grounds"},
-    {"name": "Arcane", "code": "arcane"},
-    {"name": "Spiritforged", "code": "spiritforged"},
-    {"name": "Unleashed", "code": "unleashed"}
+    {"name": "Origins", "code": "Origins"},
+    {"name": "Proving Grounds", "code": "Proving Grounds"},
+    {"name": "Spiritforged (SFD)", "code": "SFD"},
+    {"name": "Arcane", "code": "Arcane"},
+    {"name": "Unleashed", "code": "Unleashed"}
 ]
 
 @app.on_event("startup")

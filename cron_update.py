@@ -29,8 +29,9 @@ def run_update(quantities, zero_only, languages):
                     for d in DOMAINS:
                         print(f"Fetching: {r} {d} | Qty: {q} | Zero: {z} | Lang: {actual_lang}")
                         
-                        # Call the calculation logic
-                        result = calculate_cost(r, d, q, z, actual_lang)
+                        # result = calculate_cost(r, d, q, z, actual_lang)
+                        # The function signature was updated, ensure we pass foil=False by default
+                        result = calculate_cost(r, d, q, z, actual_lang, None, False)
                         
                         if "error" not in result and result.get("count", 0) > 0:
                             save_price(
