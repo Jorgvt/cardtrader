@@ -19,7 +19,26 @@ def normalize_name(name):
     """Lowercases and removes all non-alphanumeric characters."""
     return re.sub(r'[^a-z0-9]', '', name.lower())
 
-def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, lang_target=None, expansion_filter=None, foil_target=False):
+def load_inventory(inventory_file):
+    """Loads user collection from a CSV file."""
+    inventory = {} # normalized_name -> quantity
+    if not inventory_file or not os.path.exists(inventory_file):
+        return inventory
+    
+    try:
+        with open(inventory_file, mode='r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                name = row.get('Name')
+                qty = row.get('Quantity', 0)
+                if name:
+                    inventory[normalize_name(name)] = int(qty)
+    except Exception as e:
+        print(f"Warning: Error loading inventory {inventory_file}: {e}")
+    
+    return inventory
+
+def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, lang_target=None, expansion_filter=None, foil_target=False, inventory=None):
     load_dotenv(dotenv_path='env')
     api_token = os.getenv('API_CARDTRADER')
     if not api_token:
@@ -30,8 +49,6 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
     # 1. Parse New CSV and filter cards
     cards_to_buy = []
     try:
-        # Using the new file: riftbound_cards_by_set.csv
-        # Headers: Set,Name,Dominion,Rarity,Energy,Might,Text
         with open('riftbound_cards_by_set.csv', mode='r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
             for row in reader:
@@ -45,7 +62,16 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
                 # Expansion filter
                 if expansion_filter and row['Set'].lower() != expansion_filter.lower(): continue
                 
-                cards_to_buy.append(row)
+                # Calculate needed quantity based on inventory
+                target_qty = quantity
+                if inventory:
+                    owned_qty = inventory.get(normalize_name(row['Name']), 0)
+                    target_qty = max(0, quantity - owned_qty)
+                
+                if target_qty > 0:
+                    row['_needed_qty'] = target_qty
+                    cards_to_buy.append(row)
+                    
     except Exception as e:
         return {"error": f"Error reading riftbound_cards_by_set.csv: {str(e)}"}
 
@@ -57,12 +83,14 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
             "total_cost": 0,
             "found_count": 0,
             "items_found": 0,
-            "currency": "EUR"
+            "currency": "EUR",
+            "using_inventory": bool(inventory)
         }
 
     total_cost_cents = 0
     found_count = 0
     total_items_found = 0
+    total_items_needed = sum(c['_needed_qty'] for c in cards_to_buy)
     currency = "EUR"
     blueprint_cache = {}
 
@@ -73,7 +101,6 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
         exp_id = EXPANSION_MAP.get(set_name)
 
         if not exp_id:
-            # Fallback if set name isn't in map but expansion filter provided an ID
             if expansion_filter and expansion_filter.isdigit():
                 exp_id = int(expansion_filter)
             else:
@@ -87,15 +114,13 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
             except:
                 continue
 
-        # Find BP by name (since IDs are no longer in CSV)
         target_bp = None
         for bp in blueprint_cache.get(exp_id, []):
             if normalize_name(bp['name']) == card_name_norm:
-                # Prioritize non-showcase versions unless specified
                 if bp.get('version') in [None, '']:
                     target_bp = bp
                     break
-                target_bp = bp # Keep fallback
+                target_bp = bp
         
         if not target_bp: continue
 
@@ -110,7 +135,6 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
         if zero_only:
             listings = [l for l in listings if l.get('user', {}).get('can_sell_via_hub') is True]
 
-        # FILTER: Ignore graded and low condition
         listings = [
             l for l in listings 
             if not l.get('graded', False) 
@@ -133,7 +157,7 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
         if not listings: continue
 
         sorted_listings = sorted(listings, key=lambda x: x.get('price_cents', float('inf')))
-        needed = quantity
+        needed = card['_needed_qty']
         card_total_cents = 0
         card_items_found = 0
         
@@ -159,8 +183,10 @@ def calculate_cost(rarity_target, domain_target, quantity=1, zero_only=False, la
         "count": len(cards_to_buy),
         "found_count": found_count,
         "items_found": total_items_found,
+        "items_needed": total_items_needed,
         "total_cost": total_cost_cents / 100,
-        "currency": currency
+        "currency": currency,
+        "using_inventory": bool(inventory)
     }
 
 if __name__ == "__main__":
@@ -172,14 +198,19 @@ if __name__ == "__main__":
     parser.add_argument("-z", "--zero", action="store_true", help="Zero compatibility only")
     parser.add_argument("-e", "--expansion", help="Filter by expansion name (Origins, SFD, etc.)")
     parser.add_argument("-f", "--foil", action="store_true", help="Only include foil listings")
+    parser.add_argument("-i", "--inventory", help="Path to collection.csv file")
     
     args = parser.parse_args()
-    result = calculate_cost(args.rarity, args.domain, args.quantity, args.zero, args.language, args.expansion, args.foil)
+    
+    inventory = load_inventory(args.inventory)
+    result = calculate_cost(args.rarity, args.domain, args.quantity, args.zero, args.language, args.expansion, args.foil, inventory)
     
     if "error" in result:
         print(f"Error: {result['error']}")
     else:
         print(f"\n--- Results (Using riftbound_cards_by_set.csv) ---")
-        print(f"Target: {result['count']} cards, {args.quantity} copies")
-        print(f"Items found: {result['items_found']}/{result['count']*args.quantity}")
+        if result['using_inventory']:
+            print("Filtering by owned cards in inventory.")
+        print(f"Target: {result['count']} unique cards missing, {result['items_needed']} total items needed")
+        print(f"Items found: {result['items_found']}/{result['items_needed']}")
         print(f"Total Cost: {result['total_cost']:.2f} {result['currency']}")

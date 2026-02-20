@@ -48,26 +48,39 @@ async def get_price(
     lang = l if l else None
     exp = e if e else None
     
-    latest = db.get_latest_price(rarity, domain, q, z, lang, exp, f)
+    # Inventory check
+    inventory = None
+    if os.path.exists("collection.csv"):
+        inventory = calc.load_inventory("collection.csv")
     
-    if latest and not force_refresh:
-        return dict(latest)
+    # We only use cache if not using inventory, 
+    # OR we could improve cache to store inventory-based results (complex)
+    # For now, if inventory exists, we ignore cache to be safe
+    if not inventory:
+        latest = db.get_latest_price(rarity, domain, q, z, lang, exp, f)
+        if latest and not force_refresh:
+            return dict(latest)
 
     # 3. Call API and save
-    result = calc.calculate_cost(rarity, domain, q, z, lang, exp, f)
+    result = calc.calculate_cost(rarity, domain, q, z, lang, exp, f, inventory)
     
     if "error" not in result and result.get("count", 0) > 0:
-        db.save_price(
-            rarity, domain, q, z, lang, exp,
-            result["total_cost"], result["items_found"], result["count"], result["currency"], f
-        )
-        latest = db.get_latest_price(rarity, domain, q, z, lang, exp, f)
-        return dict(latest)
+        # Only cache results if NOT using inventory
+        if not inventory:
+            db.save_price(
+                rarity, domain, q, z, lang, exp,
+                result["total_cost"], result["items_found"], result["count"], result["currency"], f
+            )
+            latest = db.get_latest_price(rarity, domain, q, z, lang, exp, f)
+            return dict(latest)
     
     return result
 
 @app.get("/api/latest")
 async def get_all_latest(q: int = 1, z: bool = False, l: str = None, e: str = None, f: bool = False):
+    if os.path.exists("collection.csv"):
+        return [] # Don't load cached if using inventory, force live or separate cache
+    
     lang = l if l else None
     exp = e if e else None
     return db.get_all_latest(q, z, lang, exp, f)
