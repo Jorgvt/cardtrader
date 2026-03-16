@@ -6,4 +6,4 @@ cd "$(dirname "$0")"
 PORT=${1:-8000}
 
 # Run the server using uv
-uv run python server.py --port "$PORT"
+uv run python main.py --port "$PORT"

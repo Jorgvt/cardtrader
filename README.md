@@ -1,89 +1,56 @@
-# CardTrader Riftbound Tools
+# CardTrader Multi-Game Hub
 
-A collection of Python scripts to interact with the CardTrader API for the Riftbound TCG.
+A modular collection of tools to track card prices, find deals, and manage inventories across multiple TCGs using the CardTrader API. Currently supporting **Riftbound** and **Flesh and Blood (FAB)**.
 
-## Prerequisites
+## Project Structure
 
-- [uv](https://github.com/astral-sh/uv) for dependency management.
-- A CardTrader API token.
+- `app/core/`: Shared logic for API and Database.
+- `app/games/`: Game-specific implementations (Riftbound, FAB).
+- `data/`: CSV data and user collections organized by game.
+- `templates/`: Dashboard UI.
 
 ## Setup
 
-1. Create an `env` file in the root directory.
-2. Add your API token:
+1. **API Key**: Create an `env` file in the root:
    ```env
    API_CARDTRADER="your_token_here"
    ```
-
-## Scripts
-
-### 1. Find Cheap Cards (`find_cheap_cards.py`)
-Finds cards where the cheapest listing is significantly lower (20%+) than the market floor.
-
-**Usage:**
-```bash
-uv run find_cheap_cards.py <rarity> [language] [flags]
-```
-
-**Flags:**
-- `-e, --expansion`: Expansion name (e.g., `origins`, `unleashed`) or ID. Default: `origins`.
-- `-z, --zero`: Only include CardTrader Zero compatible listings.
-
----
-
-### 2. Calculate Collection Cost (`calculate_collection_cost.py`)
-Calculates the total cost to buy a set of cards filtered by rarity and domain.
-
-**Usage:**
-```bash
-uv run calculate_collection_cost.py <rarity> <domain> [language] [flags]
-```
-
-**Flags:**
-- `-e, --expansion`: Filter by expansion name (e.g., `origins`, `unleashed`) or code (`ogn`, `unl`).
-- `-q, --quantity`: Number of copies of each card (default: 1).
-- `-z, --zero`: Only include CardTrader Zero compatible listings.
-
----
-
-### 3. Fetch Wishlists (`fetch_wishlists.py`)
-Fetches all your CardTrader wishlists and saves their contents into individual text files.
-
-**Usage:**
-```bash
-uv run fetch_wishlists.py [flags]
-```
-
-**Flags:**
-- `-e, --expansion`: Filter items by expansion name or ID.
-- `-z, --zero`: Filter items by CardTrader Zero compatibility.
-
----
-
-### 4. Web Dashboard (`server.py`)
-A FastAPI-based web dashboard that shows a grid of collection prices for each domain and rarity.
-
-**Usage:**
-1. Run the server:
+2. **Dependencies**:
    ```bash
-   uv run python server.py --port 8000
+   uv sync
    ```
-   *(Or use `./start_server.sh 8000`)*
-2. Open your browser at `http://localhost:8000`.
-3. Configure your filters (Quantity, Zero, Language) and click **Refresh All Prices**.
 
----
+## Features
 
-### 5. Automated Updates (`cron_update.py`)
-A script intended for use with a cronjob to update the database automatically.
+### 1. Multi-Game Dashboard
+A FastAPI web server that displays a grid of collection prices.
+- **Run**: `uv run python main.py --port 8000` (or use `./start_server.sh 8000`)
+- **URL**: `http://localhost:8000`
+- **Features**: Filter by Game, Rarity, Domain/Class, Language, and Foiling. Supports "Zero Only" listings and respects your local inventory.
 
-**Manual Run Example:**
-```bash
-# Update for quantities 1 and 3, in both English and French, Zero Only
-uv run python cron_update.py --quantities 1 3 --languages en fr --zero 1
-```
+### 2. Automated Price Updates
+A script to update the price database via cronjob.
+- **Manual Run**:
+  ```bash
+  uv run python cron_update.py --game riftbound --quantities 1 3 --languages en --zero 1
+  ```
+- **Cronjob Example**:
+  ```cron
+  0 */6 * * * cd /path/to/project && /path/to/uv run python cron_update.py -g fab -q 1 -z 1 >> /path/to/project/cron_fab.log 2>&1
+  ```
 
-**Setting up a Cronjob:**
-```cron
-0 */6 * * * cd /path/to/project && /path/to/uv run python cron_update.py -q 1 3 -l en -z 1 >> /path/to/project/cron.log 2>&1
-```
+### 3. Inventory Management
+Track what you own to see only the cost of "missing" cards.
+- **Riftbound**: Edit `data/riftbound/collection.csv`. Use `collection_template.csv` as a starting point.
+- **FAB**: Support for `data/fab/collection.csv` (uses `Name, Quantity`).
+
+### 4. Legacy / Utility Scripts
+The root directory contains several utility scripts for specific tasks:
+- `find_cheap_cards.py`: Snipe underpriced listings (Riftbound optimized).
+- `fetch_wishlists.py`: Export your CardTrader wishlists to text files.
+- `generate_collection_template.py`: Create a blank inventory CSV for Riftbound.
+
+## Supported Games
+
+- **Riftbound**: Full set tracking (Origins, SFD, etc.) using `riftbound_cards_by_set.csv`.
+- **Flesh and Blood**: Class/Talent based tracking using `fab-cards.csv` mapping.
