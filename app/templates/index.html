@@ -32,81 +32,166 @@
     </nav>
 
     <div class="container-fluid px-4">
-        <div class="card shadow-sm mb-4">
-            <div class="card-body">
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label class="form-label">Quantity:</label>
-                        <input type="number" id="qty" class="form-control" value="1" min="1" onchange="loadCached()">
-                    </div>
-                    <div class="col-auto">
-                        <div class="form-check mt-4">
-                            <input class="form-check-input" type="checkbox" id="zero" onchange="loadCached()">
-                            <label class="form-check-label" for="zero">Zero Only</label>
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs mb-4" id="mainTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</button>
+            </li>
+            {% if current_game == 'fab' %}
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="list-gen-tab" data-bs-toggle="tab" data-bs-target="#list-gen" type="button" role="tab" aria-controls="list-gen" aria-selected="false">List Generator</button>
+            </li>
+            {% endif %}
+        </ul>
+
+        <div class="tab-content" id="mainTabsContent">
+            <!-- Dashboard Tab -->
+            <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label class="form-label">Quantity:</label>
+                                <input type="number" id="qty" class="form-control" value="1" min="1" onchange="loadCached()">
+                            </div>
+                            <div class="col-auto">
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="checkbox" id="zero" onchange="loadCached()">
+                                    <label class="form-check-label" for="zero">Zero Only</label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="form-check mt-4">
+                                    <input class="form-check-input" type="checkbox" id="foil" onchange="loadCached()">
+                                    <label class="form-check-label" for="foil">Foil Only</label>
+                                    <input class="form-check-input" type="checkbox" id="foil" onchange="loadCached()">
+                                    <label class="form-check-label" for="foil">Foil Only</label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <label class="form-label">Language:</label>
+                                <select id="lang" class="form-select" onchange="loadCached()">
+                                    <option value="">Any</option>
+                                    <option value="en">English</option>
+                                    <option value="fr">French</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <label class="form-label">Expansion:</label>
+                                <select id="exp" class="form-select" onchange="loadCached()">
+                                    <option value="">All Sets</option>
+                                    {% for e in expansions %}
+                                    <option value="{{ e.code }}">{{ e.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <button onclick="refreshAll(true)" class="btn btn-warning mt-4">🔥 Force Refresh (API)</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-auto">
-                        <div class="form-check mt-4">
-                            <input class="form-check-input" type="checkbox" id="foil" onchange="loadCached()">
-                            <label class="form-check-label" for="foil">Foil Only</label>
-                        </div>
-                    </div>
-                    <div class="col-auto">
-                        <label class="form-label">Language:</label>
-                        <select id="lang" class="form-select" onchange="loadCached()">
-                            <option value="">Any</option>
-                            <option value="en">English</option>
-                            <option value="fr">French</option>
-                        </select>
-                    </div>
-                    <div class="col-auto">
-                        <label class="form-label">Expansion:</label>
-                        <select id="exp" class="form-select" onchange="loadCached()">
-                            <option value="">All Sets</option>
-                            {% for e in expansions %}
-                            <option value="{{ e.code }}">{{ e.name }}</option>
+                </div>
+
+                <div class="table-responsive shadow-sm rounded">
+                    <table class="table table-bordered mb-0 bg-white">
+                        <thead>
+                            <tr>
+                                <th class="rarity-header">Rarity / Domain</th>
+                                {% for domain in domains %}
+                                <th class="domain-header">{{ domain }}</th>
+                                {% endfor %}
+                                <th class="domain-header bg-dark text-white">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for rarity in rarities %}
+                            <tr>
+                                <td class="rarity-header">{{ rarity }}</td>
+                                {% for domain in domains %}
+                                <td><div id="cell-{{ rarity }}-{{ domain }}" class="price-cell" onclick="showDetails('{{ rarity }}', '{{ domain }}')"><span class="loading">...</span></div></td>
+                                {% endfor %}
+                                <td><div id="total-row-{{ rarity }}" class="price-cell fw-bold bg-light">0.00 EUR</div></td>
+                            </tr>
                             {% endfor %}
-                        </select>
-                    </div>
-                    <div class="col-auto">
-                        <button onclick="refreshAll(true)" class="btn btn-warning mt-4">🔥 Force Refresh (API)</button>
+                        </tbody>
+                        <tfoot>
+                            <tr class="fw-bold bg-dark text-white">
+                                <td class="rarity-header">Total</td>
+                                {% for domain in domains %}
+                                <td><div id="total-col-{{ domain }}" class="price-cell">0.00 EUR</div></td>
+                                {% endfor %}
+                                <td class="p-0"><div id="total-grand" class="price-cell bg-success text-white">0.00 EUR</div></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- List Generator Tab (FAB Only) -->
+            {% if current_game == 'fab' %}
+            <div class="tab-pane fade" id="list-gen" role="tabpanel" aria-labelledby="list-gen-tab">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="row g-3 mb-4 align-items-end">
+                            <div class="col-md-2">
+                                <label class="form-label">Class:</label>
+                                <select id="gen-class" class="form-select">
+                                    {% for domain in domains %}
+                                    <option value="{{ domain }}">{{ domain }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Rarity:</label>
+                                <select id="gen-rarity" class="form-select">
+                                    {% for rarity in rarities %}
+                                    <option value="{{ rarity }}">{{ rarity }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Expansion:</label>
+                                <select id="gen-exp" class="form-select">
+                                    <option value="all">All Expansions</option>
+                                    {% for e in expansions %}
+                                    <option value="{{ e.code }}">{{ e.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label">Quantity:</label>
+                                <input type="number" id="gen-qty" class="form-control" value="1" min="1">
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="gen-dedup" checked>
+                                    <label class="form-check-label" for="gen-dedup">Deduplicate</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button onclick="generateList()" class="btn btn-primary w-100">Generate List</button>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div id="gen-status" class="text-muted italic"></div>
+                            <div class="d-flex align-items-center">
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="checkbox" id="gen-zero">
+                                    <label class="form-check-label" for="gen-zero">Zero Only</label>
+                                </div>
+                                <button id="btn-estimate" class="btn btn-sm btn-outline-success" onclick="estimateCost()" style="display:none;">💰 Estimate Cost</button>
+                                <div id="gen-total" class="fw-bold text-success fs-5 ms-3"></div>
+                            </div>
+                        </div>
+                        <div class="position-relative">
+                            <textarea id="gen-output" class="form-control" rows="15" readonly placeholder="List will appear here..."></textarea>
+                            <button class="btn btn-sm btn-success position-absolute top-0 end-0 m-2" onclick="copyGenOutput()">📋 Copy</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="table-responsive shadow-sm rounded">
-            <table class="table table-bordered mb-0 bg-white">
-                <thead>
-                    <tr>
-                        <th class="rarity-header">Rarity / Domain</th>
-                        {% for domain in domains %}
-                        <th class="domain-header">{{ domain }}</th>
-                        {% endfor %}
-                        <th class="domain-header bg-dark text-white">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for rarity in rarities %}
-                    <tr>
-                        <td class="rarity-header">{{ rarity }}</td>
-                        {% for domain in domains %}
-                        <td><div id="cell-{{ rarity }}-{{ domain }}" class="price-cell" onclick="showDetails('{{ rarity }}', '{{ domain }}')"><span class="loading">...</span></div></td>
-                        {% endfor %}
-                        <td><div id="total-row-{{ rarity }}" class="price-cell fw-bold bg-light">0.00 EUR</div></td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-                <tfoot>
-                    <tr class="fw-bold bg-dark text-white">
-                        <td class="rarity-header">Total</td>
-                        {% for domain in domains %}
-                        <td><div id="total-col-{{ domain }}" class="price-cell">0.00 EUR</div></td>
-                        {% endfor %}
-                        <td><div id="total-grand" class="price-cell bg-success text-white">0.00 EUR</div></td>
-                    </tr>
-                </tfoot>
-            </table>
+            {% endif %}
         </div>
     </div>
 
@@ -142,7 +227,8 @@
     <script>
         const currentGame = "{{ current_game }}";
         let currentPrices = {}; 
-        let fullData = {}; // Store raw data for each cell
+        let fullData = {}; 
+        let lastGeneratedBlueprints = [];
 
         function updateCell(rarity, domain, data) {
             const cellKey = `${rarity}-${domain}`;
@@ -172,7 +258,7 @@
             const q = document.getElementById('qty').value, z = document.getElementById('zero').checked, l = document.getElementById('lang').value, f = document.getElementById('foil').checked, e = document.getElementById('exp').value;
             
             try {
-                const response = await fetch(`/api/${currentGame}/price?rarity=${rarity}&domain=${domain}&q=${q}&z=${z}&l=${l}&f=${f}&e=${e}&force_refresh=${force}`);
+                const response = await fetch(`/api/${currentGame}/price?rarity=${encodeURIComponent(rarity)}&domain=${encodeURIComponent(domain)}&q=${q}&z=${z}&l=${encodeURIComponent(l)}&f=${f}&e=${encodeURIComponent(e)}&force_refresh=${force}`);
                 const data = await response.json();
                 if (data.error) { cell.innerHTML = `<span class="text-danger small">${data.error}</span>`; currentPrices[`${rarity}-${domain}`] = 0; }
                 else { updateCell(rarity, domain, data); }
@@ -186,7 +272,7 @@
             rarities.forEach(r => domains.forEach(d => { document.getElementById(`cell-${r}-${d}`).innerHTML = '<span class="loading">...</span>'; currentPrices[`${r}-${d}`] = 0; }));
 
             try {
-                const response = await fetch(`/api/${currentGame}/latest?q=${q}&z=${z}&l=${l}&f=${f}&e=${e}`);
+                const response = await fetch(`/api/${currentGame}/latest?q=${q}&z=${z}&l=${encodeURIComponent(l)}&f=${f}&e=${encodeURIComponent(e)}`);
                 const data = await response.json();
                 data.forEach(item => updateCell(item.rarity, item.domain, item));
             } catch (err) { console.error("Error loading cache", err); }
@@ -196,15 +282,8 @@
         function showDetails(rarity, domain) {
             const key = `${rarity}-${domain}`;
             const data = fullData[key];
-            console.log("Clicked cell:", key, "Data:", data);
+            if (!data) return;
 
-            if (!data) {
-                console.warn("No data for", key);
-                return;
-            }
-
-            // The data from DB uses 'items' property (which we parsed from items_json)
-            // The data from direct API uses 'items' property too
             if (!data.items || data.items.length === 0) {
                 alert("No card details available for this set. You may need to Force Refresh to populate this data.");
                 return;
@@ -235,13 +314,11 @@
             const title = document.getElementById('modalTitle').innerText;
             const rarityDomain = title.replace(' Breakdown', '');
             const data = Object.values(fullData).find(d => `${d.rarity} ${d.domain}` === rarityDomain);
-            
             if (!data || !data.items) return;
 
             const text = data.items.map(i => `${i.qty}x ${i.name}`).join('\n');
-            
             navigator.clipboard.writeText(text).then(() => {
-                alert("Copied to clipboard in CardTrader format!\n\nYou can now paste this directly into 'Add multiple items' in your CardTrader wishlist.");
+                alert("Copied to clipboard in CardTrader format!");
             });
         }
 
@@ -257,6 +334,87 @@
             const rarities = {{ rarities | tojson }}, domains = {{ domains | tojson }};
             let sequence = Promise.resolve();
             for (const r of rarities) { for (const d of domains) { sequence = sequence.then(() => fetchPrice(r, d, force)); } }
+        }
+
+        async function generateList() {
+            const className = document.getElementById('gen-class').value;
+            const rarity = document.getElementById('gen-rarity').value;
+            const exp = document.getElementById('gen-exp').value;
+            const output = document.getElementById('gen-output');
+            const status = document.getElementById('gen-status');
+            const totalDisplay = document.getElementById('gen-total');
+            const qty = document.getElementById('gen-qty').value;
+            const dedup = document.getElementById('gen-dedup').checked;
+            const btnEstimate = document.getElementById('btn-estimate');
+
+            output.value = '';
+            totalDisplay.innerText = '';
+            btnEstimate.style.display = 'none';
+            status.innerText = 'Generating list...';
+
+            try {
+                const url = `/api/fab/generate-list?class_name=${encodeURIComponent(className)}&rarity=${encodeURIComponent(rarity)}&expansion=${encodeURIComponent(exp)}&quantity=${qty}&deduplicate=${dedup}`;
+                const response = await fetch(url);
+                const data = await response.json();
+                
+                if (data.items && data.items.length > 0) {
+                    output.value = data.items.join('\n');
+                    status.innerText = `Found ${data.items.length} cards.`;
+                    lastGeneratedBlueprints = data.blueprints || [];
+                    btnEstimate.style.display = 'block';
+                } else {
+                    output.value = '';
+                    status.innerText = 'No cards found matching the criteria.';
+                    lastGeneratedBlueprints = [];
+                }
+            } catch (err) {
+                console.error("Error generating list", err);
+                status.innerText = 'Error generating list. Check console for details.';
+            }
+        }
+
+        async function estimateCost() {
+            if (lastGeneratedBlueprints.length === 0) return;
+            
+            const status = document.getElementById('gen-status');
+            const totalDisplay = document.getElementById('gen-total');
+            const btnEstimate = document.getElementById('btn-estimate');
+            const qty = document.getElementById('gen-qty').value;
+            const zero = document.getElementById('gen-zero').checked;
+
+            btnEstimate.disabled = true;
+            totalDisplay.innerText = 'Calculating...';
+            status.innerText = `Fetching prices for ${lastGeneratedBlueprints.length} cards...`;
+
+            try {
+                const response = await fetch('/api/fab/estimate-cost', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        blueprint_ids: lastGeneratedBlueprints.map(b => b.id),
+                        quantity: parseInt(qty),
+                        zero_only: zero
+                    })
+                });
+                const data = await response.json();
+                
+                const cost = data.total_cost !== undefined ? data.total_cost.toFixed(2) : '0.00';
+                totalDisplay.innerText = `Est. Total: ${cost} ${data.currency || 'EUR'}`;
+                status.innerText = `Found ${lastGeneratedBlueprints.length} cards.`;
+            } catch (err) {
+                console.error("Error estimating cost", err);
+                totalDisplay.innerText = 'Error';
+            } finally {
+                btnEstimate.disabled = false;
+            }
+        }
+
+        function copyGenOutput() {
+            const output = document.getElementById('gen-output');
+            if (!output.value) return;
+            navigator.clipboard.writeText(output.value).then(() => {
+                alert("List copied to clipboard!");
+            });
         }
 
         window.onload = loadCached;

@@ -46,6 +46,8 @@ Track what you own to see only the cost of "missing" cards.
 
 ### 4. Legacy / Utility Scripts
 The root directory contains several utility scripts for specific tasks:
+- `generate_fab_list.py`: Generate a CardTrader-ready list for a specific FAB Class and Rarity.
+  - **Usage**: `uv run python generate_fab_list.py --class_name "Ninja" --rarity "Majestic" --expansion "Rosetta"`
 - `find_cheap_cards.py`: Snipe underpriced listings (Riftbound optimized).
 - `fetch_wishlists.py`: Export your CardTrader wishlists to text files.
 - `generate_collection_template.py`: Create a blank inventory CSV for Riftbound.

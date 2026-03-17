@@ -16,7 +16,11 @@ class FABGame(BaseGame):
     @property
     def domains(self):
         # These are Classes/Talents in FAB
-        return ["Generic", "Brute", "Guardian", "Ninja", "Warrior", "Mechanologist", "Ranger", "Runeblade", "Wizard", "Illusionist", "Merchant", "Assassin", "Bard", "Brute", "Guardian", "Lightning", "Earth", "Ice", "Draconic", "Light", "Shadow", "Elemental"]
+        return ["Generic", "Brute", "Guardian", "Ninja", "Warrior", "Mechanologist", "Ranger", "Runeblade", "Wizard", "Illusionist", "Merchant", "Assassin", "Bard", "Lightning", "Earth", "Ice", "Draconic", "Light", "Shadow", "Elemental"]
+
+    def normalize_name(self, name):
+        """Basic alphanumeric normalization."""
+        return re.sub(r'[^a-z0-9]', '', name.lower()).strip()
 
     @property
     def expansions(self):
@@ -41,12 +45,8 @@ class FABGame(BaseGame):
             "Compendium of Rathe": 4375
         }
 
-    def normalize_name(self, name):
-        return re.sub(r'[^a-z0-9]', '', name.lower())
-
     def is_foil(self, listing):
         props = listing.get('properties_hash', {})
-        # FAB uses 'foil' property usually
         return props.get('foil') or props.get('fab_foil')
 
     def get_domain_property_name(self):
@@ -61,7 +61,6 @@ class FABGame(BaseGame):
         
         try:
             with open(path, mode='r', encoding='utf-8') as f:
-                # FAB CSV uses quotes and might have commas in fields
                 reader = csv.DictReader(f)
                 for row in reader:
                     name = row.get('Name')
@@ -82,10 +81,7 @@ class FABGame(BaseGame):
         return mapping
 
     def calculate_collection_cost(self, rarity_target, domain_target, quantity=1, zero_only=False, lang_target=None, expansion_filter=None, foil_target=False, use_inventory=False):
-        # 1. Load FAB database (mapping names to Types)
         type_mapping = self.load_cards_mapping()
-        
-        # 2. Fetch blueprints for selected expansion
         exp_id = self.expansions.get(expansion_filter)
         if not exp_id:
             return {"error": f"Expansion '{expansion_filter}' not found for FAB"}
@@ -95,27 +91,16 @@ class FABGame(BaseGame):
         except Exception as e:
             return {"error": f"Error fetching blueprints: {str(e)}"}
 
-        # 3. Filter blueprints by Rarity and Domain
         target_blueprints = []
         for bp in blueprints:
-            # Check rarity
             bp_rarity = bp.get('fixed_properties', {}).get('fab_rarity', '').lower()
             if bp_rarity != rarity_target.lower():
                 continue
             
-            # Check domain (Types) via name matching
             bp_name = bp['name']
             norm_bp_name = self.normalize_name(bp_name)
-            
-            # Try to find Types in our mapping
             card_types = type_mapping.get(norm_bp_name, "")
-            if not card_types:
-                # Try partial match or stripping " - Red" etc if mapping only has base name
-                # Actually our mapping should have norm_name_color
-                pass
             
-            # Check if domain_target is in card_types
-            # Domain target is e.g. "Ninja"
             if domain_target.lower() not in card_types.lower():
                 continue
             
@@ -130,7 +115,6 @@ class FABGame(BaseGame):
         currency = "EUR"
         items_list = []
 
-        # 4. Fetch prices for each matched blueprint
         for bp in target_blueprints:
             try:
                 market_data = api.fetch_marketplace_products(bp['id'])
